@@ -1,0 +1,48 @@
+/* Shared styles for the Floral Decor site */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Pacifico&display=swap');
+
+:root{
+  --brand:#EC167F;
+  --dark:#1f2937;
+}
+
+body{
+  font-family: 'Oswald', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.navbar-brand{
+  font-family: 'Pacifico', cursive;
+  color: var(--brand) !important;
+  font-size: 1.6rem;
+}
+
+.btn-brand{
+  background: var(--brand);
+  color: #fff;
+  border: none;
+}
+.btn-brand:hover{
+  background: #b71060;
+  color: #fff;
+}
+
+.hero{
+  background: linear-gradient(180deg, rgba(236,22,127,0.10), rgba(236,22,127,0.04));
+}
+.hero .display-5{
+  font-family: 'Pacifico', cursive;
+  color: var(--brand);
+}
+
+.card .price{
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.badge-filter{
+  cursor:pointer;
+}
+
+footer{
+  border-top: 1px solid #eee;
+}

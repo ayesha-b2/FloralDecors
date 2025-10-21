@@ -1,0 +1,5321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        
+ <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); 
+     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Nunito:wght@400;600&display=swap');
+
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        .img-fluid{
+            height: auto;
+            max-height: 120px;
+        }
+        #card1 img#i1,
+        #card1 #i1,
+        #i1.img-fluid,
+        img#i1.img-fluid,
+        #i1{
+            height: 610px !important;
+            max-height: 610px !important;
+            min-height: 610px !important;
+            width: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+        img#i2.img-fluid, img#i3.img-fluid, img#i4.img-fluid, img#i5.img-fluid{
+            max-height: none !important;
+            height: auto !important;
+        }
+        i{
+            font-size: x-large;
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            /* padding-top: 20px; */
+            margin: 0 auto;
+        }
+        i:hover{
+            color: #EC167F;
+        }
+        .custom-header
+        {
+          position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           height: 90px;
+             text-align: center;
+           z-index: 9999;
+           background: white;
+        }
+        #nav-links{
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+        
+        #nav-links a{
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            line-height: 60px;
+            transition: 0.5s ease;
+        }
+         #nav-links a:hover{
+           color: #EC167F;
+                 
+         }
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .menu-toggle span{
+            display: block;
+            height: 3px;
+            background-color: black;
+            border-radius: 2px;
+        }
+        @media (max-width:992px) {
+            #nav-links{
+                display: none;
+                flex-direction: column;
+                background-color: white;
+                position: absolute;
+                top: 60px;
+                font-size: 1.2em;
+                right: 0;
+                width: 200px;
+                padding: 10px;
+                border-radius: 8px;
+                height: auto;
+                box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+            }
+            i{
+                font-size: xx-large;
+            }
+            #nav-links.active{
+                display: flex;
+            }
+            .menu-toggle{
+                display: flex;
+            
+            }
+                  
+           
+        }
+        .nav-link{
+         font-family: "Oswald", sans-serif;
+         font-weight: 800;
+         font-size: 1.1em;
+         
+        }
+        #nav{
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+        #ig{
+       display: flex;
+       gap: 20px;
+        }
+      
+
+  .nav-link {
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 100px;
+      text-align: center;
+
+    }
+
+    .nav-link:hover {
+      background-color: rgb(218, 89, 110);
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    #flo{
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 140px;
+      text-align: center;
+
+    }
+     #flo:hover {
+    background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+     #flow{
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 150px;
+      text-align: center;
+
+    }
+     #flow:hover {
+        background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+      #flof{
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 121px !important;
+      text-align: center;
+
+    }
+     #flof:hover {
+        background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    #lop{
+    
+      min-height: 600px;
+    }
+       #lop1{
+    
+      min-height: 300px;
+    }
+
+     .text-overlay{
+    
+      height: auto;
+      width: 100%;
+      max-width: 95px;
+      border: 4px double rgb(238, 153, 167);
+      background-color: rgb(235, 106, 127);
+      color: white;
+    }
+    .text-overlay:hover{
+        background-color: rgb(247, 173, 185);
+         color: white;
+         box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+      }
+       .text-overlay2{
+      position: absolute;
+      top: 80%;
+      left: 55%;
+      /* align-items: ; */
+      /* align-items: flex-end; */
+      height: auto;
+      width: 100%;
+      max-width: 115px;
+      border: 4px double rgb(238, 153, 167);
+      background-color: rgb(235, 106, 127);
+      color: white;
+    }
+    @media (max-width:946px) {
+        .text-overlay2{
+            position: absolute;
+      top: 80%;
+      left: 42%;  
+        }
+    }
+    .text-overlay2:hover{
+        background-color: rgb(247, 173, 185);
+         color: white;
+         box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+      }
+      @media  (max-width:1024) {
+         .text-overlay2{
+           position: absolute;
+      top: 80%;
+      left: 40%;
+       height: auto;
+      width: 100%;
+      max-width: 110px;
+         }
+      }
+   #ma{
+    margin-left: 10px;
+   }
+  
+  
+  #mt{
+   min-height: 500px ;
+   
+  }
+  /* .row{
+    margin-left: 10px;
+  } */
+  #box{
+    transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 100px;
+      text-align: center;
+  }
+  #box:hover{
+    background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  #flo1{
+    transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 120px;
+      text-align: center;
+  }
+  #flo1:hover{
+    background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  :root{
+   
+  }
+  #navinp{
+    display: flex;
+    align-items: center;
+     border-radius: 50px;
+    height: auto;
+    width: 100%;
+    /* max-width: 40px; */
+    align-content: center;
+       box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.2);
+         border: 2px solid white;
+       background: linear-gradient(to right, #ff1493, #ffabe0);
+       color: white;
+  }
+  #navinp:focus{
+       border-color: white;
+  outline: none;
+   background: #f14a9b;
+  box-shadow: 0 0 10px #ff66b2aa;
+  color: white;
+  }
+   #navinp::placeholder{
+    color: white;
+   }
+  @media  (max-width:1075px){
+    #navinp{
+     
+    display: none;
+    }
+  }
+  .nav-item{
+    display: flex;
+    align-items: center;
+  }
+  
+      /* position: absolute;
+      top: 440px;
+      left: 10px;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 700;
+      width: 190px;
+      border-radius: 20px;
+      height: auto;
+      min-height: 40px;
+      background-color: red;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.4rem;
+      color: white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  }   */
+     .dropdown-menu{
+        background-color: #EC167F;
+        box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+      }
+.dropdown-item{
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: white;
+    color: #EC167F;
+}
+.navbar,
+.container-fluid,
+.d-flex {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Ensure dropdown appears on top */
+.dropdown-menu {
+  z-index: 1050;
+  position: absolute;
+  top: 100%; /* ensures it's below the toggle link */
+  left: 0;
+}
+/* Enable dropdown on hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Optional: animate the dropdown */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+    #card1{
+    height: 610px !important;
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    max-height: 610px !important;
+}
+#i1{
+    height: 610px !important;
+    width: 100%;
+    object-fit: cover;
+    max-height: 610px !important;
+    min-height: 610px !important;
+}
+#btn1{
+
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 63%;
+}
+#btn1:hover{
+  background-color: white;
+  border: 4px double #EC167F;
+  color: #EC167F !important;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 60%;
+}
+#btn2:hover{
+  background-color: white;
+  border: 4px double #EC167F;
+  color: #EC167F !important;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 46%;
+}
+#btn3:hover{
+  background-color: white;
+  border: 4px double #EC167F;
+  color: #EC167F !important;
+}
+#card4{
+    height: 300px !important;
+    width: 100%;
+
+    max-height: 300px !important;
+    min-height: 300px !important;
+
+    /* margin-top: 20px; */
+    
+
+}
+#i4{
+    height: 300px !important;
+    width: 100%;
+    min-height: 300px !important;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 33%;
+}
+#btn4:hover{
+  background-color: white;
+  border: 4px double #EC167F;
+  color: #EC167F !important;
+}
+#card5{
+    height: 300px !important;
+    width: 100%;
+    max-height: 300px !important;
+    max-height: 300px !important;
+    min-height: 300px !important;
+    min-height: 300px !important;
+    /* margin-top: 20px; */
+    
+
+}
+#i5{
+    height: 300px !important;
+    width: 100%;
+    min-height: 300px !important;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 61%;
+}
+#btn5:hover{
+  background-color: white;
+  border: 4px double #EC167F;
+  color: #EC167F !important;
+}
+@media (min-width: 200px) and (max-width: 319px){
+    #card1{
+        display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+         height: auto;
+    width: 100%;
+    min-height: 560px;
+    margin-top: 20px;
+    min-width: 170px;
+   
+    }
+    #i1{
+    /* height: auto; */
+    width: 100%;
+    min-height: 560px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 86%;
+    left: 30%;
+}
+     #card2{
+        display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+         height: auto;
+    width: 100%;
+    min-width: 170px;
+    max-height: 610px;
+    margin-top: 20px;
+   
+    }
+    #i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 27%;
+}
+       #card3{
+       display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+         height: auto;
+    width: 100%;
+    min-height: 280px;
+    min-width: 170px;
+    margin-top: 20px;
+    }
+    #i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 75%;
+    left: 10%;
+}
+      #card4{
+
+    display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+         height: auto;
+    width: 100%;
+    min-width: 170px;
+    min-height: 410px;
+    margin-top: 20px;
+    }
+    #i4{
+    height: auto;
+    width: 100%;
+    min-width: 170px;
+    min-height: 410px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 82%;
+    left: 10%;
+}
+     #card5{
+       display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+    min-width: 170px;
+}
+ #i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 10%;
+}
+}
+@media (min-width: 320px) and (max-width: 370px) {
+    #card1{
+        display: flex;
+        justify-content: center;
+    height: auto;
+    width: 100%;
+    max-width: 340px;
+    max-height: 610px;
+    margin-top: 20px;
+}
+
+#i1{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 52%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+     max-width: 100%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 50%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+     max-width: 100%;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 31%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+     max-width: 100%;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 37%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+     max-width: 100%;
+     
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 38%;
+}
+}
+@media (min-width: 371px) and (max-width: 400px){
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 58%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 56%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 40%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 45%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 46%;
+}
+}
+@media  (min-width: 401px) and (max-width: 450px) {
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 63%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 61%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 47%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    /* margin-top: -300px; */
+ margin-top: 20px;   
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 52%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 52%;
+}
+}
+@media  (min-width: 451px) and (max-width: 500px) {
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 63%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 61%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 47%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    /* margin-top: -300px; */
+ margin-top: 20px;   
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 52%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 52%;
+}
+}
+@media  (min-width: 501px) and (max-width: 550px) {
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: ;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 66%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 76%;
+    left: 65%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 53%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    /* margin-top: -300px; */
+ margin-top: 20px;   
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 76%;
+    left: 57%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 57%;
+}
+}
+@media  (min-width: 551px) and (max-width: 600px) {
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 69%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 78%;
+    left: 67%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 350px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 78%;
+    left: 56%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 450px;
+    /* margin-top: -300px; */
+ margin-top: 20px;   
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 450px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 83%;
+    left: 60%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 80%;
+    left: 60%;
+}
+}
+@media  (min-width: 601px) and (max-width: 700px) {
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 72%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 82%;
+    left: 70%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 400px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 400px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 81%;
+    left: 60%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 450px;
+    /* margin-top: -300px; */
+ margin-top: 20px;   
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 450px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 83%;
+    left: 64%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 80%;
+    left: 64%;
+}
+}
+@media  (min-width: 701px) and (max-width: 769px) {
+   #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+  
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 76%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+  
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 83%;
+    left: 74%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 400px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 400px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 81%;
+    left: 65%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 450px;
+    /* margin-top: -300px; */
+ margin-top: 20px;   
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 450px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 83%;
+    left: 68%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+    /* margin-top: -300px; */
+    margin-top: 20px;
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 350px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 80%;
+    left: 69%;
+}
+}
+@media (min-width: 770px) and (max-width: 800px) {
+     #card1{
+    height: auto;
+    width: 100%;
+    max-height: 610px;
+    margin-top: 20px;
+}
+#i1{
+    height: auto;
+    width: 100%;
+    min-height: 610px;
+}
+#btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 35%;
+}
+#card2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+    margin-top: 20px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 31%;
+}
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+#btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 5%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#i4{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 0%;
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#i5{
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+     font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 32%;
+}
+}
+@media (min-width: 801px) and (max-width: 900px){
+ #btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 40%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 35%;
+}
+  #btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    /* font-size: 1.1em;
+    font-weight: 600; */
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 9%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+} 
+#btn4{
+    height: auto;
+    width: 100%;
+    min-width: px;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 1%;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 37%;
+}
+  
+}      
+@media (min-width: 901px) and (max-width: 1000px){
+ #btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 46%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 41%;
+}
+  #btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 21%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+} 
+#btn4{
+    height: auto;
+    width: 100%;
+       max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 10%;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 43%;
+}
+  
+}      
+@media (min-width: 1001px) and (max-width: 1100px) {
+  #btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 55%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 51%;
+}
+  #btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 32%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+} 
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 17%;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 52%;
+}
+  
+}
+@media (min-width: 1101px) and (max-width: 1200px) {
+  #btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 57%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 53%;
+}
+  #btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 35%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+} 
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 20%;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 55%;
+}
+  
+}
+@media (min-width: 1201px) and (max-width: 1300px) {
+  #btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 58%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 54%;
+}
+  #btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 37%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+} 
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 25%;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 56%;
+}
+  
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+  #btn1{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 88%;
+    left: 61%;
+}
+#btn2{
+    height: auto;
+    width: 100%;
+    max-width: 130px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 57%;
+}
+  #btn3{
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74%;
+    left: 43%;
+}
+#card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+} 
+#btn4{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 30%;
+}
+#btn5{
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+    font-size: 1.1em;
+    font-weight: 600;
+        background-color: #EC167F;
+      color: white !important;
+      border: 4px double white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 77%;
+    left: 59%;
+}
+  
+}
+@media (min-width: 1401px)  {
+ #card4{
+  
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card5{
+  
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+    margin-top: -300px;
+    
+
+}
+#card2{
+    height: auto;
+    width: 100%;
+    max-height: 350px;
+    margin-top: 30px;
+}
+#i2{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+}
+
+#card3{
+    height: auto;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 20px;
+}
+#i3{
+    height: auto;
+    width: 100%;
+    min-height: 280px;
+}
+
+}
+.cards-carousel { position: relative; }
+    .cards-track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem 1rem;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
+      overflow-x: hidden;
+      transition: 2s ease-in-out;
+    }
+
+    .card-item {
+      flex: 0 0 25%;          /* default: 4 cards visible */
+      box-sizing: border-box;
+    }
+
+    /* responsive: 3 on large, 2 on tablet, 1 on mobile */
+    @media (min-width: 1200px) { .card-item { flex-basis: 24%; } }  /* 5 items */
+    @media (max-width: 991px)  { .card-item { flex-basis: 33.3333%; } } /* 3 */
+    @media (max-width: 768px)  { .card-item { flex-basis: 50%; } }     /* 2 */
+    @media (max-width: 576px)  { .card-item { flex-basis: 100%; } }    /* 1 */
+
+
+    /* Card and Image Standardization for Both Carousels */
+    .card-item .card {
+      width: 100%;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-item .card-img-top {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .card-item .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card {
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* active visual */
+    .card.active {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      border: 6px double #EC167F; /* bootstrap primary */
+    }
+
+    /* controls / indicators styling */
+    .controls { display:flex; gap:.5rem; justify-content:center; margin-top:.75rem; }
+    .controls .btn { min-width: 3.25rem; background-color: #EC167F; color: white; font-size: 1.5em; font-weight: 600; border: none;}
+       .controls .btn:hover,
+       .controls .btn:focus,
+       .controls .btn:active {
+          background-color: white;
+          color: #EC167F;
+       }
+    .indicators { display:flex; gap:.5rem; justify-content:center; margin-top:.5rem; }
+    .indicators button {
+      width: 15px; height: 15px; border-radius: 50%; border: none;
+      background: white; padding:0; border: 3px solid black;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .indicators button.active { background: #EC167F; border: 3px solid black; }
+    .card-text{
+        color: #EC167F;
+        font-weight: 600;
+        
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+}
+.fade-out {
+  opacity: 0;
+}
+    
+    .card-title:hover{
+      color: #EC167F;
+    }
+    .wrap{
+       
+        display: flex;
+        gap: 20px;
+         font-family: "Oswald", sans-serif;
+  font-weight: 400;
+ 
+    }
+    #mc{
+           border-bottom: 2px solid black;
+         width: 100%;
+        max-width: 1700px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+#for{
+    color: #EC167F;
+}
+#for2{
+    color: #EC167F;
+}
+.fade-text {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+}
+.fade-out {
+  opacity: 0;
+}
+.navbar,
+.navbar-toggler{
+ text-decoration: none;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+
+    /* ========== ATTRACTIVE ANIMATIONS & STYLING ========== */
+    
+    /* Smooth page load animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+    
+    /* Heading animations */
+    .wrap h1 {
+      animation: slideInLeft 0.8s ease-out;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    #for, #for2 {
+      animation: slideInRight 0.8s ease-out;
+      position: relative;
+      display: inline-block;
+    }
+    
+    #for::after, #for2::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #EC167F, #ff69b4);
+      animation: shimmer 2s infinite;
+      background-size: 1000px 100%;
+    }
+    
+    /* Card hover effects */
+    .card-item .card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .card-item .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+      z-index: 1;
+    }
+    
+    .card-item .card:hover::before {
+      left: 100%;
+    }
+    
+    .card-item .card:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(236, 22, 127, 0.3);
+    }
+    
+    .card-item .card-img-top {
+      transition: transform 0.5s ease;
+      border-radius: 15px 15px 0 0;
+    }
+    
+    .card-item .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+    
+    .card-title {
+      font-weight: 600;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    
+    .card-item .card:hover .card-title {
+      color: #EC167F;
+      transform: scale(1.05);
+    }
+    
+    /* Animated gradient background for containers */
+    .container.py-5 {
+      position: relative;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    /* Controls enhanced styling */
+    .controls {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .controls .btn {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(236, 22, 127, 0.3);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .controls .btn:hover {
+      transform: scale(1.2) rotate(360deg);
+      box-shadow: 0 6px 25px rgba(236, 22, 127, 0.5);
+    }
+    
+    .controls .btn:active {
+      transform: scale(0.95);
+    }
+    
+    /* Indicators enhanced animation */
+    .indicators button {
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    
+    .indicators button:hover {
+      transform: scale(1.3);
+      box-shadow: 0 4px 12px rgba(236, 22, 127, 0.4);
+    }
+    
+    .indicators button.active {
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 15px rgba(236, 22, 127, 0.6);
+    }
+    
+    /* Price text animation */
+    .card-text {
+      transition: all 0.3s ease;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .card-item .card:hover .card-text {
+      transform: scale(1.1);
+      text-shadow: 0 2px 10px rgba(236, 22, 127, 0.3);
+    }
+    
+    /* Border line animation */
+    #mc, #mc2 {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    #mc::after, #mc2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #EC167F, transparent);
+      animation: shimmer 3s infinite;
+    }
+    
+    /* Carousel track smooth scroll */
+    .cards-track {
+      scroll-behavior: smooth;
+    }
+    
+    /* Card entrance animation on scroll */
+    .card-item {
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+    
+    .card-item:nth-child(1) { animation-delay: 0.1s; }
+    .card-item:nth-child(2) { animation-delay: 0.2s; }
+    .card-item:nth-child(3) { animation-delay: 0.3s; }
+    .card-item:nth-child(4) { animation-delay: 0.4s; }
+    .card-item:nth-child(5) { animation-delay: 0.5s; }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .controls .btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+      }
+      
+      .wrap h1 {
+        font-size: 1.5rem;
+      }
+      
+      .card-item .card:hover {
+        transform: translateY(-10px) scale(1.02);
+      }
+    }
+    
+    /* Add subtle background gradient */
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #fef5f9 100%);
+      min-height: 100vh;
+    }
+    
+    /* Card body gradient overlay */
+    .card-body {
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Additional floating animation for cards */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    .card-item .card.active {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    /* Glowing effect on active card */
+    .card-item .card.active::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #EC167F, #ff69b4, #EC167F);
+      border-radius: 15px;
+      z-index: -1;
+      opacity: 0.7;
+      filter: blur(10px);
+      animation: pulse 2s infinite;
+    }
+    
+    /* Smooth transitions for all interactive elements */
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    /* Enhanced card shadow on active state */
+    .card-item .card.active {
+      box-shadow: 0 25px 50px rgba(236, 22, 127, 0.4);
+    }
+
+    /* ========== STATIC CARDS ANIMATIONS & STYLING ========== */
+    
+    /* Card entrance animations */
+    #card1, #card2, #card3, #card4, #card5 {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: fadeInUp 0.8s ease-out backwards;
+    }
+    
+    #card1 { animation-delay: 0.2s; }
+    #card2 { animation-delay: 0.4s; }
+    #card3 { animation-delay: 0.6s; }
+    #card4 { animation-delay: 0.8s; }
+    #card5 { animation-delay: 1s; }
+    
+    /* Hover effects for static cards */
+    #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover {
+      transform: translateY(-20px) scale(1.05);
+      box-shadow: 0 25px 50px rgba(236, 22, 127, 0.4);
+    }
+    
+    /* Image zoom effect on hover */
+    #i1, #i2, #i3, #i4, #i5 {
+      transition: transform 0.6s ease;
+      border-radius: 20px 20px 0 0;
+    }
+    
+    #card1:hover #i1,
+    #card2:hover #i2,
+    #card3:hover #i3,
+    #card4:hover #i4,
+    #card5:hover #i5 {
+      transform: scale(1.15) rotate(2deg);
+    }
+    
+    /* Shimmer overlay on cards */
+    #card1::before, #card2::before, #card3::before, #card4::before, #card5::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.6s;
+      z-index: 1;
+    }
+    
+    #card1:hover::before, #card2:hover::before, #card3:hover::before, 
+    #card4:hover::before, #card5:hover::before {
+      left: 100%;
+    }
+    
+    /* Enhanced button styling for static cards */
+    #btn1, #btn2, #btn3, #btn4, #btn5 {
+      transition: all 0.4s ease;
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 5px 15px rgba(236, 22, 127, 0.4);
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+    
+    #btn1::before, #btn2::before, #btn3::before, #btn4::before, #btn5::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    #btn1:hover::before, #btn2:hover::before, #btn3:hover::before, 
+    #btn4:hover::before, #btn5:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    #btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 25px rgba(236, 22, 127, 0.6);
+    }
+    
+    #btn1:active, #btn2:active, #btn3:active, #btn4:active, #btn5:active {
+      transform: translateY(-2px) scale(1.05);
+    }
+    
+    /* Glowing border effect on hover */
+    #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover {
+      border: 3px solid transparent;
+      background-image: 
+        linear-gradient(white, white),
+        linear-gradient(45deg, #EC167F, #ff69b4, #EC167F);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+    
+    /* Floating animation for cards */
+    @keyframes floatCard {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+    
+    #card1 { animation: floatCard 6s ease-in-out infinite; animation-delay: 0s; }
+    #card2 { animation: floatCard 6s ease-in-out infinite; animation-delay: 1s; }
+    #card3 { animation: floatCard 6s ease-in-out infinite; animation-delay: 2s; }
+    #card4 { animation: floatCard 6s ease-in-out infinite; animation-delay: 3s; }
+    #card5 { animation: floatCard 6s ease-in-out infinite; animation-delay: 4s; }
+    
+    /* Pause floating on hover */
+    #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover {
+      animation-play-state: paused;
+    }
+    
+    /* Responsive adjustments for static cards */
+    @media (max-width: 768px) {
+      #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover {
+        transform: translateY(-10px) scale(1.02);
+      }
+      
+      #btn1, #btn2, #btn3, #btn4, #btn5 {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+
+
+    /* Second row positioning and alignment */
+    .row.second-row {
+      margin-top: 20px !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: flex-start !important;
+    }
+
+
+    /* Buttons need high z-index to appear above everything */
+    #btn1, #btn2, #btn3, #btn4, #btn5 {
+      bottom: 15px !important;
+      right: 15px !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      min-width: 150px !important;
+      max-width: 200px !important;
+      padding: 8px 15px !important;
+      white-space: nowrap !important;
+      font-size: 0.9rem !important;
+      position: absolute !important;
+      z-index: 100 !important;
+      pointer-events: auto !important;
+    }
+
+    /* Ensure buttons are visible - cards need position relative */
+    #card1, #card2, #card3, #card4, #card5 {
+      z-index: 10 !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    /* Fix card heights - card1=610px, card2/3=280px, card4/5=300px */
+    #card2, #card3 {
+      height: 280px !important;
+      max-height: 280px !important;
+      min-height: 280px !important;
+    }
+    
+    #card4, #card5 {
+      height: 300px !important;
+      max-height: 300px !important;
+    max-height: 300px !important;
+    min-height: 300px !important;
+      min-height: 300px !important;
+    }
+    
+    #i2, #i3 {
+      height: 280px !important;
+      max-height: 280px !important;
+      min-height: 280px !important;
+      width: 100% !important;
+      /* object-fit: cover; */
+      /* object-position: center; */
+    }
+    
+    #i4, #i5 {
+      height: 300px !important;
+      max-height: 300px !important;
+      min-height: 300px !important;
+      width: 100% !important;
+      /* object-fit: cover; */
+      /* object-position: center; */
+    }
+      
+    /* Animated Modal Styles */
+        .card-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .card-modal.show {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Modal Wrapper */
+    .modal-content-wrapper {
+      background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+      padding: 0;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 20px 60px rgba(236, 22, 127, 0.4);
+      animation: slideInScale 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Modal Header */
+    .modal-header-custom {
+      background: linear-gradient(135deg, #EC167F 0%, #ff69b4 100%);
+      padding: 25px 30px;
+      color: white;
+      position: relative;
+    }
+
+    .modal-header-custom h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    /* Modal Body */
+    .modal-body-custom {
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      background-image: url(ruby.jpg.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Inner content with backdrop and gradient */
+    .modal-content-inner {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 192, 203, 0.15));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 90%;
+      
+      color: #EC167F;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-body-custom p {
+      font-size: 1.2rem;
+      color: inherit;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-weight: 600;
+        font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+    }
+
+    .modal-icon {
+      font-size: 4rem;
+      color: inherit;
+      animation: heartBeat 1.5s infinite;
+      color: #EC167F;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInScale {
+      0% {
+        transform: scale(0.7) translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      10%, 30% { transform: scale(1.1); }
+      20%, 40% { transform: scale(0.95); }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    .card-modal.hide {
+      animation: fadeOut 0.3s ease;
+    }
+
+    /* Optional: Example buttons for testing */
+    .trigger-btn {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #EC167F;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .trigger-btn:hover {
+      background-color: #c2136b;
+    }
+
+    /* Optional image element style */
+   
+    #mo{
+      height: auto;
+      width: 100%;
+      max-width: 200px;
+    }
+  
+
+   
+
+    /* Welcome Modal Overlay */
+    .welcome-modal-overlay {
+        font-family: 'Dancing Script', cursive;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(255, 240, 245, 0.8);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: welcomeFadeIn 0.8s ease;
+    }
+
+    .welcome-modal-box {
+      position: relative;
+      /* background: linear-gradient(135deg, #fcb6d0 0%, #f6d365 100%); */
+      background-image: url(imgi_106_pngtree-pink-bougainvillea-flower-on-beautiful-background-picture-image_15428247.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: white;
+      max-width: 90%;
+      width: 400px;
+      animation: welcomeZoomIn 0.8s ease;
+    }
+
+    .welcome-modal-box h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .welcome-modal-box p {
+      font-size: 1.4rem;
+      margin-top: 0;
+      font-weight: 600;
+      color: #EC167F;
+    }
+
+    .welcome-close-btn {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .welcome-close-btn:hover {
+      transform: rotate(180deg) scale(1.3);
+      color: #ffe5ec;
+    }
+
+    @keyframes welcomeFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes welcomeZoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes welcomeFadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .welcome-hide {
+      animation: welcomeFadeOut 0.5s forwards;
+    }
+   #l{
+    margin-top: -100px;
+   }
+  #last {
+  background-image: url('pm.jpg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Centered box */
+#io {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Optional, for readability */
+  border: 4px double #EC167F;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; /* Centers horizontally */
+  box-sizing: border-box;
+  box-shadow:  0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+#last h2 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #EC167F;
+  font-size: 1.9em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* List container */
+#ml {
+  color: #5c5c5c;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding-left: 1.2rem;
+}
+
+/* List items */
+.mli {
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Custom bullet */
+.mli::marker {
+  color: #EC167F;
+  font-size: 1.3em;
+}
+@media (max-width: 768px) {
+  #last {
+    align-items: flex-start; /* top-align on smaller screens */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #io {
+    padding: 1.5rem;
+  }
+
+  #last h2 {
+    font-size: 1.5em;
+  }
+
+  .mli {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  #last h2 {
+    font-size: 1.3em;
+  }
+
+  .mli {
+    font-size: 0.9em;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Nunito:wght@400;600&display=swap');
+
+#florp-footer.ziggly {
+  --zig-pink-dark: #c71585;
+  --zig-pink-light: #ffb6c1;
+  --zig-pink-gradient: linear-gradient(45deg, #ff1493, #ff69b4);
+  --zig-text-color: #3a0e44;
+  --zig-background: linear-gradient(135deg, #ffe6f0, #ffd1e8);
+  font-family: 'Nunito', sans-serif;
+  background: var(--zig-background);
+  color: var(--zig-text-color);
+  padding: 4rem 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+#florp-footer.ziggly .gribbly-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Footer row flex */
+#florp-footer.ziggly .glip-glop-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+}
+
+/* Each column */
+#florp-footer.ziggly .glip-glop-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+#florp-footer.ziggly .florp-about {
+  flex: 1.5 1 320px;
+}
+
+/* Headings */
+#florp-footer.ziggly h2,
+#florp-footer.ziggly h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: var(--zig-pink-dark);
+  text-shadow: 0 1px 4px #f9a8ddaa;
+  animation: zoomZazzle 1.3s ease forwards;
+}
+
+#florp-footer.ziggly h2 {
+  font-style: italic;
+  font-size: 2.9rem;
+}
+
+#florp-footer.ziggly h5 {
+  font-size: 1.4rem;
+}
+
+#florp-footer.ziggly p {
+  font-weight: 600;
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2.6rem;
+  color: var(--zig-pink-dark);
+  animation: wiggleWaggle 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Links */
+#florp-footer.ziggly .glip-glop-links a {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.65rem;
+  color: var(--zig-pink-dark);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: slideZiggle 1.3s ease forwards;
+  opacity: 0;
+}
+#florp-footer.ziggly .glip-glop-links a:hover {
+  color: #ff4db8;
+  transform: translateX(7px);
+}
+/* Animate links with delay */
+#florp-footer.ziggly .glip-glop-links a:nth-child(1) { animation-delay: 1.1s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(2) { animation-delay: 1.2s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(3) { animation-delay: 1.3s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(4) { animation-delay: 1.4s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(5) { animation-delay: 1.5s; }
+
+/* Subscribe Form */
+#florp-footer.ziggly .snorp-form {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+#florp-footer.ziggly input[type="email"].snorp-email {
+  flex: 1 1 180px;
+  padding: 0.55rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--zig-pink-dark);
+  font-weight: 700;
+  color: var(--zig-pink-dark);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+#florp-footer.ziggly input[type="email"].snorp-email::placeholder {
+  color: #f79ac8;
+}
+#florp-footer.ziggly input[type="email"].snorp-email:focus {
+  border-color: #ff66b2;
+  outline: none;
+  box-shadow: 0 0 10px #ff66b2aa;
+}
+
+#florp-footer.ziggly button[type="submit"].snorp-button {
+  background: var(--zig-pink-gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  padding: 0.55rem 2.3rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #ff4db8aa;
+  transition: background 0.4s ease, transform 0.25s ease;
+  animation: zoomZazzle 1.7s ease forwards;
+}
+#florp-footer.ziggly button[type="submit"].snorp-button:hover {
+  background: #ff4db8;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px #ff66b2cc;
+}
+
+/* Social Icons */
+#florp-footer.ziggly .glop-socials {
+  display: flex;
+  gap: 1.1rem;
+}
+#florp-footer.ziggly .glop-socials a {
+  font-size: 1.9rem;
+  color: var(--zig-pink-dark);
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+#florp-footer.ziggly .glop-socials a:hover {
+  color: #ff66b2;
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* Footer bottom */
+#florp-footer.ziggly hr.zap-line {
+  border: none;
+  height: 1.5px;
+  background: var(--zig-pink-dark);
+  margin: 3rem 0 1rem;
+  opacity: 0.4;
+}
+#florp-footer.ziggly .zap-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--zig-pink-dark);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Back to top button */
+#florp-footer.ziggly .zoop-top {
+  background: var(--zig-pink-dark);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #ff4db8cc;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#florp-footer.ziggly .zoop-top:hover {
+  background: #ff4db8;
+  transform: scale(1.3);
+}
+
+/* Petals */
+#florp-footer.ziggly .plorp-petal {
+  position: absolute;
+  width: 80px;
+  height: 110px;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.35;
+  animation: florpFloat 12s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px #ff4db8cc);
+  transform-origin: center bottom;
+  pointer-events: none;
+  user-select: none;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(1) {
+  top: 15%;
+  left: 12%;
+  animation-delay: 0s;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(2) {
+  top: 35%;
+  left: 75%;
+  animation-delay: 4s;
+  width: 60px;
+  height: 90px;
+  opacity: 0.3;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(3) {
+  top: 70%;
+  left: 45%;
+  animation-delay: 8s;
+  width: 70px;
+  height: 100px;
+  opacity: 0.32;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(4) {
+  top: 55%;
+  left: 85%;
+  animation-delay: 6s;
+  width: 55px;
+  height: 80px;
+  opacity: 0.28;
+}
+
+/* Animations */
+@keyframes florpFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-40px) rotate(15deg) scale(1.1);
+    opacity: 0.6;
+  }
+}
+@keyframes zoomZazzle {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes slideZiggle {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes wiggleWaggle {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes popZop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(8deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes fadeZink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal styles */
+#florp-footer.ziggly #wobble-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  background: rgba(255, 20, 147, 0.85);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeZink 0.35s ease forwards;
+}
+#florp-footer.ziggly #wobble-modal.sproing {
+  display: flex;
+  animation: popZop 0.4s ease forwards;
+}
+
+#florp-footer.ziggly .zooble-content {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 1.2rem;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 15px 40px #ff4db8cc;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  color: var(--zig-pink-dark);
+  transform-origin: center;
+}
+
+#florp-footer.ziggly #wobble-modal p#ziggyMessage {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem;
+}
+
+#florp-footer.ziggly .sprocket-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.3rem;
+  font-size: 2rem;
+  color: var(--zig-pink-dark);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.xx_socialbox a i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  will-change: transform, color;
+   font-size: 1.9rem;
+  color: purple;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover animation: scale and rotate slightly with color change */
+.xx_socialbox a:hover i {
+  color: #EC167F; /* bright pink */
+  transform: scale(1.3) rotate(15deg);
+
+}
+
+/* Continuous subtle bounce animation */
+@keyframes weirdbounce01 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Apply subtle bounce on all icons, delayed for each */
+/* .xx_socialbox a i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  will-change: transform, color;
+}
+
+/* Hover animation: scale and rotate slightly with color change */
+.xx_socialbox a:hover i {
+  color: #EC167F; /* bright pink */
+  transform: scale(1.3) rotate(15deg);
+  
+}
+
+/* Continuous subtle bounce animation */
+@keyframes weirdbounce01 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Apply subtle bounce on all icons, delayed for each */
+.xx_socialbox a i {
+  animation: weirdbounce01 3s ease-in-out infinite;
+}
+
+.xx_socialbox a:nth-child(1) i {
+  animation-delay: 0s;
+}
+.xx_socialbox a:nth-child(2) i {
+  animation-delay: 0.3s;
+}
+.xx_socialbox a:nth-child(3) i {
+  animation-delay: 0.6s;
+}
+.xx_socialbox a:nth-child(4) i {
+  animation-delay: 0.9s;
+} 
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 720px) {
+  #florp-footer.ziggly .glip-glop-row {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  #florp-footer.ziggly .glip-glop-col {
+    flex: unset;
+    width: 100%;
+    min-width: auto;
+  }
+
+  #florp-footer.ziggly .zap-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+   /* 🌿 Suggestion Box */
+    .loapSuggestionBox_001 {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+        background: linear-gradient(135deg, #ffe6eb 0%, #ffd6e0 50%, #ffc2d1 100%);
+      border: 1px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      z-index: 999;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .loapSuggestionItem_001 {
+      padding: 8px 12px;
+      cursor: pointer;
+      color: #EC167F;
+      transition: background 0.2s ease;
+    }
+    .loapSuggestionItem_001:hover {
+      background: #EC167F;
+      color: white;
+    }
+
+    /* 🌸 Floral Modal Overlay */
+    .loapModalOverlay_001 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      backdrop-filter: blur(4px);
+    }
+
+    /* 🌺 Modal Box with Floral Background */
+    .loapModalBox_001 {
+      background: linear-gradient(135deg, #ffe6f0, #ffd6e0, #ffcde0);
+      color: #54213d;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      position: relative;
+      animation: loapBloomIn_001 0.7s ease forwards;
+      width: 330px;
+      box-shadow: 0 0 20px rgba(255,182,193,0.6);
+    }
+
+    /* ✨ Blooming Animation */
+    @keyframes loapBloomIn_001 {
+      0% {
+        transform: scale(0.4) rotate(-10deg);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1) rotate(3deg);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    /* 🌼 Glow pulse behind modal */
+    .loapModalBox_001::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      background: radial-gradient(circle, rgba(255,192,203,0.4), transparent 70%);
+      z-index: -1;
+      border-radius: 30px;
+      animation: loapGlowPulse_001 3s infinite ease-in-out;
+    }
+    @keyframes loapGlowPulse_001 {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+
+    /* ❌ Close Icon */
+    .loapModalClose_001 {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      font-size: 22px;
+      color: #54213d;
+      cursor: pointer;
+      transition: transform 0.4s ease, color 0.3s ease;
+    }
+    .loapModalClose_001:hover {
+      transform: rotate(180deg) scale(1.2);
+      color: #d63384;
+    }
+
+    /* 🌷 OK Button */
+    .loapModalButton_001 {
+      background: white;
+      color: #d63384;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      margin-top: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .loapModalButton_001:hover {
+      background: #ffe6f0;
+      transform: scale(1.05);
+    }
+
+    /* 🌿 Navbar Search Container */
+    .loapSearchWrapper_001 {
+      position: relative;
+      width: 250px;
+    }
+ html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+</style>
+
+</head>
+<body>
+  <!-- Welcome Modal -->
+  <div class="welcome-modal-overlay" id="welcomeModal">
+    <div class="welcome-modal-box">
+      <div class="welcome-close-btn" id="welcomeClose">&times;</div>
+      <h1>Welcome <img src="logor.jpg.png" alt="" class="img-fluid" id="mo"></h1>
+      <p>Explore the beauty of flower decor with us.</p>
+    </div>
+  </div>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="logor.jpg.png" alt="" class="img-fluid" id="my">
+             </div>
+            <nav id="nav-links">
+              <a href="index.html">Home</a>
+              <a href="flowershop.html">Flower Shop</a>
+              <a href="My Account.html">My Account</a>
+              <a href="About Us.html">About Us</a>
+              <a href="FAQS.html">FAQs</a>
+              <a href="Contact Us.html">Contact Us</a>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </nav>
+           <div class="menu-toggle" onclick="document.querySelector('#nav-links').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+           </div>
+        
+          </header>
+          
+                      <div class="d-flex">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav" id="ig">  
+        <li class="nav-item">
+          <a class="nav-link" href="Flower Boquet.html" id="flo">Flower Bouquet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flower jewellery.html" id="flo">Flower Jewellery</a>
+        </li>
+         <li class="nav-item">                                    
+
+          <a class="nav-link" href="Flower box.html" id="box">Flower Box</a>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link " href="single flower.html"  role="button" aria-expanded="false" id="flof">
+            Single Flower
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="single flower.html">Red Rose</a></li>
+            <li><a class="dropdown-item" href="single flower.html">White Rose</a></li>
+            <li><a class="dropdown-item" href="single flower.html">Daisy</a></li>
+              <li><a class="dropdown-item" href="single flower.html">Defodils</a></li>
+            <li><a class="dropdown-item" href="single flower.html">Tulip</a></li>
+            <li><a class="dropdown-item" href="single flower.html">Orchid</a></li>
+             <li><a class="dropdown-item" href="single flower.html">Lavender</a></li>
+              <li><a class="dropdown-item" href="single flower.html"> Bluebell flower</a></li>
+                <li><a class="dropdown-item" href="single flower.html">Iris</a></li>
+
+
+            
+          </ul>
+        </li>
+          <li class="nav-item">                                     
+
+          <a class="nav-link" href="Flower Basket.html" id="flo1"> Flower Basket</a>
+        </li>
+         
+         <li class="nav-item">                                     
+
+          <a class="nav-link" href="wedding.html" id="box">Wedding</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="ocassion.html" role="button" aria-expanded="false" id="box">
+            Ocassions 
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="ocassion.html">Birthday</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Get well soon</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Father's day</a></li>
+              <li><a class="dropdown-item" href="ocassion.html">Christmas</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Mother's day</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Anniversary</a></li>
+             <li><a class="dropdown-item" href="ocassion.html">Eid</a></li>
+              <li><a class="dropdown-item" href="ocassion.html"> Sympathy</a></li>
+                <li><a class="dropdown-item" href="ocassion.html">Congratulations</a></li>
+
+
+            
+          </ul>
+        </li>
+
+        
+      
+        </li>
+     
+             
+           
+      </ul>
+       <form class="d-flex ms-auto loapSearchWrapper_001" id="loapSearchForm_001" onsubmit="return false;"   autocomplete="new-password">
+                <input  class="form-control me-2  " id="navinp" type="search" placeholder="Search" aria-label="Search" >
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                <div class="loapSuggestionBox_001" id="loapSuggestionBox_001"></div>
+              </form>
+    </div>
+  </div>
+</nav>                                                     
+
+        </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="imgi_18_RF_banner_desktop_resized1 (2).png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="imgi_19_RF_banner_desktop_resized.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imgi_17_web_banner_desktop_final_248e854d-84e7-4f13-867c-7123ee207b53.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>       
+  <div class="container-fluid">
+  <div class="row ">
+    <div class="col-md-4 col-sm-12 ">
+        
+      <div class="card"  onclick="openPage('ny.html')" id="card1">
+        <img src="first.jpg.jpg" alt="" class="img-fluid" id="i1">
+        <button class="btn" id="btn1" >Birthday</button>
+      </div>
+      
+    </div>
+     <div class="col-md-4 col-sm-12">
+          <div class="d-flex">
+      <div class="card" id="card2">
+        <img src="second.jpg.jpg" alt="" class="img-fluid" id="i2">
+        <button class="btn" id="btn2" >Anniversary</button>
+      </div>
+      </div>
+    </div>
+       <div class="col-md-4 col-sm-12">
+            <div class="d-flex">
+      <div class="card" id="card3">
+        <img src="third.jpg.jpg" alt="" class="img-fluid"  id="i3">
+        <button class="btn" id="btn3" >Chocolate Basket</button>
+      </div>
+      </div>
+    </div>
+     
+    
+  </div>
+</div>
+  <div class="container-fluid">
+  <div class="row second-row">
+      <div class="col-md-3 offset-md-4 col-sm-12">
+      <div class="d-flex">
+      <div class="card" id="card4">
+        <img src="fourth.jpg.jpg" alt="" class="img-fluid" id="i4">
+        <button class="btn" id="btn4" >Congractulation</button>
+      </div>
+      </div>
+    </div>
+      <div class="col-md-5 col-sm-12">
+        <div class="d-flex">
+      <div class="card" id="card5">
+        <img src="fifth.jpg.jpg" alt="" class="img-fluid" id="i5">
+        <button class="btn" id="btn5" >Love & Romance</button>
+      </div>
+      </div>
+    </div>
+
+</div>
+</div>
+<div class="container py-5">
+      <p id="mc" class=" p-0 " ></p>
+    <div class="wrap justify-content-center py-4">
+      
+        <h1>NEW</h1>
+  <h1 id="for">ARRIVAL</h1>
+    </div>
+ 
+  <div class="cards-carousel">
+    <div class="cards-track" id="cardsTrack">
+      <!-- each item -->
+      <div class="card-item"><div class="card"><img src="bloom.jpg.jpg" class="card-img-top"><div class="card-body text-center" ><h5 class="card-title">Blooming Delight</h5><h5 class=" fade-text card-text" id="price1">PKR 3,990</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="noor.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Blossom Haven</h5><h5 class=" fade-text card-text" id="price2">PKR 14,500</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="pink.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Pink Paradise</h5><h5 class=" fade-text card-text" id="price3">PKR 3,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="pouring.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">pouring Love</h5><h5 class=" fade-text card-text" id="price4">PKR 4,300</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="final.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Sweets </h5><h5 class=" fade-text card-text" id="price5">PKR 4,300</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="mithai.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Deluxe Delight</h5><h5 class=" fade-text card-text" id="price6">PKR 7,500</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="chocolate.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Chocolate Treat</h5><h5 class=" fade-text card-text" id="price7">PKR 3,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="cherished.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Cherished Hamper</h5><h5 class=" fade-text card-text" id="price8">PKR 7,900</h5></div></div></div>
+       <div class="card-item"><div class="card"><img src="just.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Just two of us</h5><h5 class=" fade-text card-text" id="price9">PKR 2,550</h5></div></div></div>
+       <div class="card-item"><div class="card"><img src="haven.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Haven Hamper</h5><h5 class=" fade-text card-text" id="price10">PKR 6,900</h5></div></div></div>
+         <div class="card-item"><div class="card"><img src="sweet.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Sweet Caroline</h5><h5 class=" fade-text card-text" id="price11">PKR 5,500</h5></div></div></div>
+           <div class="card-item"><div class="card"><img src="sentiments.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Sweet sentiments</h5><h5 class=" fade-text card-text" id="price12">PKR 4,500</h5></div></div></div>
+           <div class="card-item"><div class="card"><img src="blissfill.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Blissful Hamper</h5><h5 class=" fade-text card-text" id="price13">PKR 7,900</h5></div></div></div>
+            <div class="card-item"><div class="card"><img src="midnight.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Mid-night cheers</h5><h5 class=" fade-text card-text" id="price14">PKR 5,500</h5></div></div></div>
+           <div class="card-item"><div class="card"><img src="crate.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Crate full of joy</h5><h5 class=" fade-text card-text" id="price15">PKR 8,900</h5></div></div></div>
+          
+          
+     
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+      <button id="prevBtn" class="btn">‹</button>
+      <button id="nextBtn" class="btn">›</button>
+    </div>
+
+    <!-- indicators (dots) -->
+    <div class="indicators" id="indicators"></div>
+  </div>
+<div class="container py-5">
+      <p id="mc2" class=" p-0 " style="border-bottom: 2px solid black; width: 100%; max-width: 1700px; margin-top: 3rem; margin-bottom: 3rem;"></p>
+    <div class="wrap justify-content-center py-4">
+      
+        <h1>NEW</h1>
+  <h1 id="for2">ARRIVAL-2</h1>
+    </div>
+ 
+  <div class="cards-carousel" id="carousel2">
+    <div class="cards-track" id="cardsTrack2">
+      <!-- each item -->
+      <div class="card-item"><div class="card"><img src="blue.jpg.jpg" class="card-img-top"><div class="card-body text-center" ><h5 class="card-title">Sweets in Basket</h5><h5 class=" fade-text card-text" id="price16">PKR 5,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="lol.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Sweets in Basket</h5><h5 class=" fade-text card-text" id="price17">PKR 5,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="bouq.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">The Soul of Rose</h5><h5 class=" fade-text card-text" id="price18">PKR 2,850</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="get.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Wholesome happiness</h5><h5 class=" fade-text card-text" id="price19">PKR 3,800</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="grey.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Everything I Adore </h5><h5 class=" fade-text card-text" id="price20">PKR 3,800</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="bow.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Indigo Charm</h5><h5 class=" fade-text card-text" id="price21">PKR 3,800</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="sale.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Essenly</h5><h5 class=" fade-text card-text" id="price22">PKR 4,250</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="small.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Dazzle</h5><h5 class=" fade-text card-text" id="price23">PKR 3,250</h5></div></div></div>
+       <div class="card-item"><div class="card"><img src="gajra.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">flower garland (Pairs)</h5><h5 class=" fade-text card-text" id="price24">PKR 3,700</h5></div></div></div>
+       <div class="card-item"><div class="card"><img src="sun.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">A sparkle</h5><h5 class=" fade-text card-text" id="price25">PKR 3,770</h5></div></div></div>
+         <div class="card-item"><div class="card"><img src="brown.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">White Gladiolus</h5><h5 class=" fade-text card-text" id="price26">PKR 2,900</h5></div></div></div>
+           <div class="card-item"><div class="card"><img src="box.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Box of White Roses</h5><h5 class=" fade-text card-text" id="price27">PKR 11,900</h5></div></div></div>
+         
+          
+     
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+      <button id="prevBtn2" class="btn"> < </button>
+      <button id="nextBtn2" class="btn"> > </button>
+    </div>
+
+    <!-- indicators (dots) -->
+    <div class="indicators" id="indicators2"></div>
+  </div>
+</div>
+</div>
+<div class="container py-5 " id="l">
+      <p id="mc2" class=" p-0 " style="border-bottom: 2px solid black; width: 100%; max-width: 1700px; margin-top: 3rem; margin-bottom: 3rem;"></p>
+    <div class="wrap justify-content-center py-4">
+      
+        <h1>FEATURED </h1>
+  <h1 id="for2">PRODUCTS</h1>
+    </div>
+ 
+  <div class="cards-carousel" id="carousel3">
+    <div class="cards-track" id="cardsTrack3">
+      <!-- each item -->
+      <div class="card-item"><div class="card"><img src="cool.jpg.jpg" class="card-img-top"><div class="card-body text-center" ><h5 class="card-title">A Cool Breeze</h5><h5 class=" fade-text card-text" id="price16">PKR 5,500</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="first.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">A Golden Hour</h5><h5 class=" fade-text card-text" id="price17">PKR 4,550 </h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="new.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">A New Day</h5><h5 class=" fade-text card-text" id="price18">PKR 3,940</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="spring.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">A Pink Spring</h5><h5 class=" fade-text card-text" id="price19">PKR 5,500</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="radiant.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">A Radiant Love </h5><h5 class=" fade-text card-text" id="price20">PKR 2,250</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="ray.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">A Ray</h5><h5 class=" fade-text card-text" id="price21">PKR 2,770</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="sparkle.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">A Sparkle</h5><h5 class=" fade-text card-text" id="price22">PKR 3,770</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="vibe.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">A Spring Vibes</h5><h5 class=" fade-text card-text" id="price23">PKR 4,200</h5></div></div></div>
+     
+          
+     
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+      <button id="prevBtn3" class="btn"> < </button>
+      <button id="nextBtn3" class="btn"> > </button>
+    </div>
+
+    <!-- indicators (dots) -->
+    <div class="indicators" id="indicators3"></div>
+  </div>
+</div>
+</div>
+<div class="container py-5 " id="l">
+      <p id="mc2" class=" p-0 " style="border-bottom: 2px solid black; width: 100%; max-width: 1700px; margin-top: 3rem; margin-bottom: 3rem;"></p>
+    <div class="wrap justify-content-center py-4">
+      
+        <h1>WEEKLY </h1>
+  <h1 id="for2"> FEATURED PRODUCTS</h1>
+    </div>
+ 
+  <div class="cards-carousel" id="carousel4">
+    <div class="cards-track" id="cardsTrack4">
+      <!-- each item -->
+      <div class="card-item"><div class="card"><img src="heart.jpg.jpg" class="card-img-top"><div class="card-body text-center" ><h5 class="card-title">Be Mine</h5><h5 class=" fade-text card-text" id="price16">PKR 3,700</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="blush.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Birthday Blush</h5><h5 class=" fade-text card-text" id="price17">PKR 5,800 </h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="Blithe.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Blithe</h5><h5 class=" fade-text card-text" id="price18">PKR 8,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="love.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Blooming Love</h5><h5 class=" fade-text card-text" id="price19">PKR 3,950</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="charm.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Charm</h5><h5 class=" fade-text card-text" id="price20">PKR 5,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="mine.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Ferrero with Roses</h5><h5 class=" fade-text card-text" id="price21">PKR 5,280</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="air.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Birthday Balloon Box</h5><h5 class=" fade-text card-text" id="price22">PKR 6,800</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="air2.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Birthday Balloon Box</h5><h5 class=" fade-text card-text" id="price23">PKR 8,400</h5></div></div></div>
+     
+          
+     
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+      <button id="prevBtn4" class="btn"> < </button>
+      <button id="nextBtn4" class="btn"> > </button>
+    </div>
+
+    <!-- indicators (dots) -->
+    <div class="indicators" id="indicators4"></div>
+  </div>
+</div>
+</div>
+<div class="container py-5 " id="l">
+      <p id="mc2" class=" p-0 " style="border-bottom: 2px solid black; width: 100%; max-width: 1700px; margin-top: 3rem; margin-bottom: 3rem;"></p>
+    <div class="wrap justify-content-center py-4">
+      
+        <h1>WEEKLY </h1>
+  <h1 id="for2"> COMBINATIONS</h1>
+    </div>
+ 
+  <div class="cards-carousel" id="carousel5">
+    <div class="cards-track" id="cardsTrack5">
+      <!-- each item -->
+      <div class="card-item"><div class="card"><img src="baby.jpg.jpg" class="card-img-top"><div class="card-body text-center" ><h5 class="card-title">Pouring Love</h5><h5 class=" fade-text card-text" id="price16">PKR 4,300</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="crate.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Birthday Blush</h5><h5 class=" fade-text card-text" id="price17">PKR 5,800 </h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="snack.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Snacks Hamper</h5><h5 class=" fade-text card-text" id="price18">PKR 8,900</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="lover.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Blooming Love</h5><h5 class=" fade-text card-text" id="price19">PKR 5,600</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="create.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Creative Gift Basket</h5><h5 class=" fade-text card-text" id="price20">PKR 7,500</h5></div></div></div>
+      <div class="card-item"><div class="card"><img src="tea.jpg.jpg" class="card-img-top"><div class="card-body text-center"><h5 class="card-title text-center">Tea Gift Basket</h5><h5 class=" fade-text card-text" id="price21">PKR 5,580</h5></div></div></div>
+     
+          
+     
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+      <button id="prevBtn5" class="btn"> < </button>
+      <button id="nextBtn5" class="btn"> > </button>
+    </div>
+
+    <!-- indicators (dots) -->
+    <div class="indicators" id="indicators5"></div>
+  </div>
+</div>
+</div>
+<div class="container-fluid" id="last">
+  <div id="io">
+    <h2 class="text-center">Why People Choose Us</h2><br>
+    <ul id="ml">
+      <li class="mli">From receiving your order, to the preparation of the bouquets to delivery, everything is done by our professional & experienced team. We do not pass your order to other local florists; this gives us the power to offer quality products at very competitive prices.</li>
+      <li class="mli">On-time delivery guaranteed</li>
+      <li class="mli">Hand delivery at the doorstep of the receiver. We are experts in delivering to all types of premises including residential, offices, hospitals, weddings/parties, hotels, restaurants, diplomatic embassies, etc.</li>
+      <li class="mli">We don’t believe in scripts; every query is different and a fresh approach is needed. We love to talk with our customers and solving their queries gives us satisfaction and energy! We have a friendly customer services team that is always willing to go the extra mile in resolving whatever queries you may have. Customer service is fun at Real Flowers!</li>
+      <li class="mli">We are an ethical business and always deliver what is promised. Of course, due to the nature of the work we are in, it is sometimes inevitable to substitute which is done in accordance with our policy of using flowers of equal or higher value.</li>
+      <li class="mli">We have a wide range of flower bouquets available prepared from local as well as imported long stem roses, lilies, orchids, tuberoses, gladiolus, carnations, chrysanthemums, baby’s breath, etc.</li>
+      <li class="mli">We offer services like weekly flower arrangements for offices & hotels as well as flower arrangements for engagements, weddings & corporate events. Same Day Flower Delivery!</li>
+      
+    </ul>
+  </div>
+</div>
+
+<footer id="florp-footer" class="ziggly">
+  <!-- Floating petals -->
+  <span class="plorp-petal"></span>
+  <span class="plorp-petal"></span>
+  <span class="plorp-petal"></span>
+  <span class="plorp-petal"></span>
+
+  <div class="gribbly-container">
+    <div class="glip-glop-row">
+      <div class="glip-glop-col florp-about">
+        <h2>Petal Paradise</h2>
+        <p>Every petal tells a story. Handcrafted bouquets & fresh blooms delivered with love.</p>
+      </div>
+
+      <div class="glip-glop-col">
+        <h5>Quick Links</h5>
+        <nav class="glip-glop-links" aria-label="Quick links">
+          <a href="About Us.html">About Us</a>
+          <a href="index.html">Services</a>
+          <a href="flowershop.html">Shop</a>
+          <a href="Contact Us.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="glip-glop-col">
+        <h5>Subscribe</h5>
+        <form class="snorp-form" id="florp-subscribe-form" novalidate>
+          <input type="email" class="snorp-email" id="snorp-email" placeholder="Your email" required aria-label="Email address" />
+          <button type="submit" class="snorp-button" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="glip-glop-col">
+        <h5>Follow Us</h5>
+        <div class="xx_socialbox">
+  <a href="https://facebook.com/YourPage" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com/YourPage" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://instagram.com/YourPage" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://pinterest.com/YourPage" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <hr class="zap-line" />
+
+    <div class="zap-bottom">
+      <p>© 2024 Petal Paradise. All rights reserved.</p>
+      <button class="zoop-top" aria-label="Back to top" title="Back to top">&#8679;</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="wobble-modal" role="dialog" aria-modal="true" aria-labelledby="ziggyMessage">
+    <div class="zooble-content">
+      <p id="ziggyMessage">Thanks for subscribing!</p>
+      <button class="sprocket-close" aria-label="Close modal">&times;</button>
+    </div>
+  </div>
+</footer>
+ <div class="loapModalOverlay_001" id="loapModalOverlay_001">
+  <div class="loapModalBox_001">
+    <span class="loapModalClose_001" id="loapModalClose_001">&times;</span>
+    <h5>Oops! 🌸</h5>
+    <p>We couldn’t find anything matching your search.</p>
+    <button class="loapModalButton_001" id="loapModalButton_001">OK</button>
+  </div>
+</div>
+
+
+<script>
+ // 🌿 Route Map
+  const loapRouteMap_001 = {
+    "home": "index.html",
+    "flower shop": "flowershop.html",
+    "my account": "My Account.html",
+    "about us": "About Us.html",
+    "faqs":"FAQS.html",
+    "contact us": "Contact Us.html",
+    "flower boquet": "Flower Boquet.html",
+    "flower jewellery": "flower jewellery.html",
+    "flower box": "Flower box.html",
+    "single flower": "single flower.html",
+     "red rose": "single flower.html",
+      "white rose": "single flower.html",
+       "daisy": "single flower.html",
+        "defodils": "single flower.html",
+         "tulip": "single flower.html",
+          "orchid": "single flower.html",
+           "lavender": "single flower.html",
+            "Bluebell": "single flower.html",
+             "iris": "single flower.html",
+    "flower basket": "Flower Basket.html",
+    "wedding": "wedding.html",
+    "ocassion": "ocassion.html",
+    "birthday": "ocassion.html",
+    "get well soon": "ocassion.html",
+     "christmas": "ocassion.html",
+      "mother day": "ocassion.html",
+       "father day": "ocassion.html",
+        "anniversary": "ocassion.html",
+         "eid": "ocassion.html",
+          "sympathy": "ocassion.html",
+           "congractulation": "ocassion.html",
+
+    
+  
+  };
+
+  const loapSearchInput = document.getElementById('navinp');
+  const loapSuggestionBox = document.getElementById('loapSuggestionBox_001');
+  const loapModalOverlay = document.getElementById('loapModalOverlay_001');
+  const loapModalClose = document.getElementById('loapModalClose_001');
+  const loapModalButton = document.getElementById('loapModalButton_001');
+
+  // ✨ Show suggestions as user types
+  loapSearchInput.addEventListener('input', () => {
+    const keyword = loapSearchInput.value.trim().toLowerCase();
+    loapSuggestionBox.innerHTML = '';
+    if (keyword === '') {
+      loapSuggestionBox.style.display = 'none';
+      return;
+    }
+    const suggestions = Object.keys(loapRouteMap_001).filter(item => item.startsWith(keyword));
+    if (suggestions.length > 0) {
+      suggestions.forEach(suggestion => {
+        const div = document.createElement('div');
+        div.className = 'loapSuggestionItem_001';
+        div.textContent = suggestion;
+        div.onclick = () => loapRedirect(suggestion);
+        loapSuggestionBox.appendChild(div);
+      });
+      loapSuggestionBox.style.display = 'block';
+    } else {
+      loapSuggestionBox.style.display = 'none';
+    }
+  });
+
+  // ⌨ Handle submit
+  document.getElementById('loapSearchForm_001').addEventListener('submit', () => {
+    const keyword = loapSearchInput.value.trim().toLowerCase();
+    if (loapRouteMap_001[keyword]) {
+      loapRedirect(keyword);
+    } else {
+      loapShowModal();
+    }
+  });
+
+  // 🚀 Redirect Function
+  function loapRedirect(keyword) {
+    const path = loapRouteMap_001[keyword];
+    if (path) {
+      window.location.href = path + '?v=' + Date.now();
+    } else {
+      loapShowModal();
+    }
+  }
+
+  // 🌸 Modal Functions
+  function loapShowModal() {
+    loapModalOverlay.style.display = 'flex';
+  }
+  function loapHideModal() {
+    loapModalOverlay.style.display = 'none';
+  }
+
+  loapModalClose.addEventListener('click', loapHideModal);
+  loapModalButton.addEventListener('click', loapHideModal);
+  window.addEventListener('click', (e) => {
+    if (e.target === loapModalOverlay) loapHideModal();
+    
+  }); 
+(() => {
+  const snorpForm = document.getElementById('florp-subscribe-form');
+  const snorpEmail = document.getElementById('snorp-email');
+  const wobbleModal = document.getElementById('wobble-modal');
+  const sprocketClose = wobbleModal.querySelector('.sprocket-close');
+  const ziggyMessage = document.getElementById('ziggyMessage');
+  const zoopTopBtn = document.querySelector('#florp-footer .zoop-top');
+
+  // Show modal function
+  function bingleModal(message) {
+    ziggyMessage.textContent = message; // set message dynamically
+    wobbleModal.classList.add('sproing');
+  }
+  // Hide modal function
+  function dingleModal() {
+    wobbleModal.classList.remove('sproing');
+  }
+
+  // Form submit handler
+  snorpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailValue = snorpEmail.value.trim();
+    if (emailValue && emailValue.includes('@')) {
+      bingleModal('Thanks for subscribing!');
+      snorpForm.reset();
+    } else {
+      bingleModal('Please enter a valid email address.');
+      snorpEmail.focus();
+    }
+  });
+
+  // Close modal button
+  sprocketClose.addEventListener('click', () => {
+    dingleModal();
+  });
+
+  // Close modal on outside click
+  wobbleModal.addEventListener('click', (e) => {
+    if (e.target === wobbleModal) {
+      dingleModal();
+    }
+  });
+
+  // Back to top button
+  zoopTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+
+  function openPage(url) {
+  // Animation before navigation (optional)
+  document.body.style.opacity = 0;
+  setTimeout(() => {
+    window.location.href = url;
+  }, 300);
+}
+    const welcomeModal = document.getElementById('welcomeModal');
+    const welcomeClose = document.getElementById('welcomeClose');
+
+    welcomeClose.addEventListener('click', () => {
+      welcomeModal.classList.add('welcome-hide');
+    });
+
+    setTimeout(() => {
+      welcomeModal.classList.add('welcome-hide');
+    }, 5000);
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.getElementById('cardsTrack');
+  const cardNodes = Array.from(track.querySelectorAll('.card'));
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const indicatorsWrap = document.getElementById('indicators');
+  const carousel = document.querySelector('.cards-carousel');
+  let activeIndex = 0;
+  let autoplayInterval;
+
+  if (!cardNodes.length) return;
+
+  // Create indicators
+  const indicators = cardNodes.map((_, idx) => {
+    const dot = document.createElement('button');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      setActive(idx);
+      scrollToCard(idx);
+    });
+    indicatorsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function setActive(idx) {
+    cardNodes[activeIndex].classList.remove('active');
+    indicators[activeIndex].classList.remove('active');
+
+    activeIndex = ((idx % cardNodes.length) + cardNodes.length) % cardNodes.length;
+
+    cardNodes[activeIndex].classList.add('active');
+    indicators[activeIndex].classList.add('active');
+  }
+
+  function scrollToCard(idx) {
+    const card = cardNodes[idx];
+    const trackRect = track.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const offset = cardRect.left - trackRect.left + track.scrollLeft;
+    const scrollPos = offset - (track.clientWidth - card.offsetWidth) / 2;
+
+    track.scrollTo({ left: scrollPos, behavior: 'smooth' });
+  }
+
+  // Navigation buttons
+  prevBtn.addEventListener('click', () => {
+    setActive(activeIndex - 1);
+    scrollToCard(activeIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    setActive(activeIndex + 1);
+    scrollToCard(activeIndex);
+  });
+
+  // Autoplay
+  function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+      setActive(activeIndex + 1);
+      scrollToCard(activeIndex);
+    }, 3000);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  // Start autoplay immediately
+  startAutoplay();
+
+  // Pause/resume on hover
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  // Card click sets active
+  cardNodes.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      setActive(i);
+      scrollToCard(i);
+    });
+  });
+
+  // Hover text: PKR → ADD TO CART
+  const priceTexts = document.querySelectorAll('.card-text');
+
+  priceTexts.forEach((textEl) => {
+    const original = textEl.textContent.trim();
+    const hoverText = 'ADD TO CART';
+  textEl.addEventListener('mouseenter', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = hoverText;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+
+    textEl.addEventListener('mouseleave', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = original;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+  });
+});
+</script>
+<script src="jquery-3.7.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script>
+// Second Carousel JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+  const track2 = document.getElementById('cardsTrack2');
+  const cardNodes2 = Array.from(track2.querySelectorAll('.card'));
+  const prevBtn2 = document.getElementById('prevBtn2');
+  const nextBtn2 = document.getElementById('nextBtn2');
+  const indicatorsWrap2 = document.getElementById('indicators2');
+  const carousel2 = document.getElementById('carousel2');
+  let activeIndex2 = 0;
+  let autoplayInterval2;
+
+  if (!cardNodes2.length) return;
+
+  // Create indicators
+  const indicators2 = cardNodes2.map((_, idx) => {
+    const dot = document.createElement('button');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      setActive2(idx);
+      scrollToCard2(idx);
+    });
+    indicatorsWrap2.appendChild(dot);
+    return dot;
+  });
+
+  function setActive2(idx) {
+    cardNodes2[activeIndex2].classList.remove('active');
+    indicators2[activeIndex2].classList.remove('active');
+
+    activeIndex2 = ((idx % cardNodes2.length) + cardNodes2.length) % cardNodes2.length;
+
+    cardNodes2[activeIndex2].classList.add('active');
+    indicators2[activeIndex2].classList.add('active');
+  }
+
+  function scrollToCard2(idx) {
+    const card = cardNodes2[idx];
+    const trackRect = track2.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const offset = cardRect.left - trackRect.left + track2.scrollLeft;
+    const scrollPos = offset - (track2.clientWidth - card.offsetWidth) / 2;
+
+    track2.scrollTo({ left: scrollPos, behavior: 'smooth' });
+  }
+
+  // Navigation buttons
+  prevBtn2.addEventListener('click', () => {
+    setActive2(activeIndex2 - 1);
+    scrollToCard2(activeIndex2);
+  });
+
+  nextBtn2.addEventListener('click', () => {
+    setActive2(activeIndex2 + 1);
+    scrollToCard2(activeIndex2);
+  });
+
+  // Autoplay
+  function startAutoplay2() {
+    autoplayInterval2 = setInterval(() => {
+      setActive2(activeIndex2 + 1);
+      scrollToCard2(activeIndex2);
+    }, 3000);
+  }
+
+  function stopAutoplay2() {
+    clearInterval(autoplayInterval2);
+  }
+
+  // Start autoplay immediately
+  startAutoplay2();
+
+  // Pause/resume on hover
+  carousel2.addEventListener('mouseenter', stopAutoplay2);
+  carousel2.addEventListener('mouseleave', startAutoplay2);
+
+  // Card click sets active
+  cardNodes2.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      setActive2(i);
+      scrollToCard2(i);
+    });
+  });
+
+  // Hover text: PKR ? ADD TO CART (for second carousel)
+  const priceTexts2 = document.querySelectorAll('#carousel2 .card-text');
+
+  priceTexts2.forEach((textEl) => {
+    const original = textEl.textContent.trim();
+    const hoverText = 'ADD TO CART';
+    textEl.addEventListener('mouseenter', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = hoverText;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+
+    textEl.addEventListener('mouseleave', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = original;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+  });
+});
+
+// THIRD Carousel JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+  const track3 = document.getElementById('cardsTrack3');
+  const cardNodes3 = Array.from(track3.querySelectorAll('.card'));
+  const prevBtn3 = document.getElementById('prevBtn3');
+  const nextBtn3 = document.getElementById('nextBtn3');
+  const indicatorsWrap3 = document.getElementById('indicators3');
+  const carousel3 = document.getElementById('carousel3');
+  let activeIndex3 = 0;
+  let autoplayInterval3;
+
+  if (!cardNodes3.length) return;
+
+  // Create indicators
+  const indicators3 = cardNodes3.map((_, idx) => {
+    const dot = document.createElement('button');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      setActive3(idx);
+      scrollToCard3(idx);
+    });
+    indicatorsWrap3.appendChild(dot);
+    return dot;
+  });
+
+  function setActive3(idx) {
+    cardNodes3[activeIndex3].classList.remove('active');
+    indicators3[activeIndex3].classList.remove('active');
+
+    activeIndex3 = ((idx % cardNodes3.length) + cardNodes3.length) % cardNodes3.length;
+
+    cardNodes3[activeIndex3].classList.add('active');
+    indicators3[activeIndex3].classList.add('active');
+  }
+
+  function scrollToCard3(idx) {
+    const card = cardNodes3[idx];
+    const trackRect = track3.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const offset = cardRect.left - trackRect.left + track3.scrollLeft;
+    const scrollPos = offset - (track3.clientWidth - card.offsetWidth) / 3;
+
+    track3.scrollTo({ left: scrollPos, behavior: 'smooth' });
+  }
+
+  // Navigation buttons
+  prevBtn3.addEventListener('click', () => {
+    setActive3(activeIndex3 - 1);
+    scrollToCard3(activeIndex3);
+  });
+
+  nextBtn3.addEventListener('click', () => {
+    setActive3(activeIndex3 + 1);
+    scrollToCard3(activeIndex3);
+  });
+
+  // Autoplay
+  function startAutoplay3() {
+    autoplayInterval3 = setInterval(() => {
+      setActive3(activeIndex3 + 1);
+      scrollToCard3(activeIndex3);
+    }, 3000);
+  }
+
+  function stopAutoplay3() {
+    clearInterval(autoplayInterval3);
+  }
+
+  // Start autoplay immediately
+  startAutoplay3();
+
+  // Pause/resume on hover
+  carousel3.addEventListener('mouseenter', stopAutoplay3);
+  carousel3.addEventListener('mouseleave', startAutoplay3);
+
+  // Card click sets active
+  cardNodes3.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      setActive3(i);
+      scrollToCard3(i);
+    });
+  });
+
+  // Hover text: PKR ? ADD TO CART (for second carousel)
+  const priceTexts2 = document.querySelectorAll('#carousel3 .card-text');
+
+  priceTexts2.forEach((textEl) => {
+    const original = textEl.textContent.trim();
+    const hoverText = 'ADD TO CART';
+    textEl.addEventListener('mouseenter', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = hoverText;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+
+    textEl.addEventListener('mouseleave', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = original;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+  });
+});
+// Fourth Carousel JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+  const track4 = document.getElementById('cardsTrack4');
+  const cardNodes4 = Array.from(track4.querySelectorAll('.card'));
+  const prevBtn4 = document.getElementById('prevBtn4');
+  const nextBtn4 = document.getElementById('nextBtn4');
+  const indicatorsWrap4 = document.getElementById('indicators4');
+  const carousel4 = document.getElementById('carousel4');
+  let activeIndex4 = 0;
+  let autoplayInterval4;
+
+  if (!cardNodes4.length) return;
+
+  // Create indicators
+  const indicators4 = cardNodes4.map((_, idx) => {
+    const dot = document.createElement('button');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      setActive4(idx);
+      scrollToCard4(idx);
+    });
+    indicatorsWrap4.appendChild(dot);
+    return dot;
+  });
+
+  function setActive4(idx) {
+    cardNodes4[activeIndex4].classList.remove('active');
+    indicators4[activeIndex4].classList.remove('active');
+
+    activeIndex4 = ((idx % cardNodes4.length) + cardNodes4.length) % cardNodes4.length;
+
+    cardNodes4[activeIndex4].classList.add('active');
+    indicators4[activeIndex4].classList.add('active');
+  }
+
+  function scrollToCard4(idx) {
+    const card = cardNodes4[idx];
+    const trackRect = track4.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const offset = cardRect.left - trackRect.left + track4.scrollLeft;
+    const scrollPos = offset - (track4.clientWidth - card.offsetWidth) / 4;
+
+    track4.scrollTo({ left: scrollPos, behavior: 'smooth' });
+  }
+
+  // Navigation buttons
+  prevBtn4.addEventListener('click', () => {
+    setActive4(activeIndex4 - 1);
+    scrollToCard4(activeIndex4);
+  });
+
+  nextBtn4.addEventListener('click', () => {
+    setActive4(activeIndex4 + 1);
+    scrollToCard4(activeIndex4);
+  });
+
+  // Autoplay
+  function startAutoplay4() {
+    autoplayInterval4 = setInterval(() => {
+      setActive4(activeIndex4 + 1);
+      scrollToCard4(activeIndex4);
+    }, 3000);
+  }
+
+  function stopAutoplay4() {
+    clearInterval(autoplayInterval4);
+  }
+
+  // Start autoplay immediately
+  startAutoplay4();
+
+  // Pause/resume on hover
+  carousel4.addEventListener('mouseenter', stopAutoplay4);
+  carousel4.addEventListener('mouseleave', startAutoplay4);
+
+  // Card click sets active
+  cardNodes4.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      setActive4(i);
+      scrollToCard4(i);
+    });
+  });
+
+  // Hover text: PKR ? ADD TO CART (for second carousel)
+  const priceTexts2 = document.querySelectorAll('#carousel4 .card-text');
+
+  priceTexts2.forEach((textEl) => {
+    const original = textEl.textContent.trim();
+    const hoverText = 'ADD TO CART';
+    textEl.addEventListener('mouseenter', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = hoverText;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+
+    textEl.addEventListener('mouseleave', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = original;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+  });
+});
+// Fifth Carousel JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+  const track5 = document.getElementById('cardsTrack5');
+  const cardNodes5 = Array.from(track5.querySelectorAll('.card'));
+  const prevBtn5 = document.getElementById('prevBtn5');
+  const nextBtn5 = document.getElementById('nextBtn5');
+  const indicatorsWrap5 = document.getElementById('indicators5');
+  const carousel5 = document.getElementById('carousel5');
+  let activeIndex5 = 0;
+  let autoplayInterval5;
+
+  if (!cardNodes5.length) return;
+
+  // Create indicators
+  const indicators5 = cardNodes5.map((_, idx) => {
+    const dot = document.createElement('button');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      setActive5(idx);
+      scrollToCard5(idx);
+    });
+    indicatorsWrap5.appendChild(dot);
+    return dot;
+  });
+
+  function setActive5(idx) {
+    cardNodes5[activeIndex5].classList.remove('active');
+    indicators5[activeIndex5].classList.remove('active');
+
+    activeIndex5 = ((idx % cardNodes5.length) + cardNodes5.length) % cardNodes5.length;
+
+    cardNodes5[activeIndex5].classList.add('active');
+    indicators5[activeIndex5].classList.add('active');
+  }
+
+  function scrollToCard5(idx) {
+    const card = cardNodes5[idx];
+    const trackRect = track5.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const offset = cardRect.left - trackRect.left + track5.scrollLeft;
+    const scrollPos = offset - (track5.clientWidth - card.offsetWidth) / 5;
+
+    track5.scrollTo({ left: scrollPos, behavior: 'smooth' });
+  }
+
+  // Navigation buttons
+  prevBtn5.addEventListener('click', () => {
+    setActive5(activeIndex5 - 1);
+    scrollToCard5(activeIndex5);
+  });
+
+  nextBtn5.addEventListener('click', () => {
+    setActive5(activeIndex5 + 1);
+    scrollToCard5(activeIndex5);
+  });
+
+  // Autoplay
+  function startAutoplay5() {
+    autoplayInterval5 = setInterval(() => {
+      setActive5(activeIndex5 + 1);
+      scrollToCard5(activeIndex5);
+    }, 3000);
+  }
+
+  function stopAutoplay5() {
+    clearInterval(autoplayInterval5);
+  }
+
+  // Start autoplay immediately
+  startAutoplay5();
+
+  // Pause/resume on hover
+  carousel5.addEventListener('mouseenter', stopAutoplay5);
+  carousel5.addEventListener('mouseleave', startAutoplay5);
+
+  // Card click sets active
+  cardNodes5.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      setActive5(i);
+      scrollToCard5(i);
+    });
+  });
+
+  // Hover text: PKR ? ADD TO CART (for second carousel)
+  const priceTexts2 = document.querySelectorAll('#carousel5 .card-text');
+
+  priceTexts2.forEach((textEl) => {
+    const original = textEl.textContent.trim();
+    const hoverText = 'ADD TO CART';
+    textEl.addEventListener('mouseenter', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = hoverText;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+
+    textEl.addEventListener('mouseleave', () => {
+      textEl.classList.add('fade-out');
+      setTimeout(() => {
+        textEl.textContent = original;
+        textEl.classList.remove('fade-out');
+      }, 300);
+    });
+  });
+});
+
+</script>
+
+<!-- Animated Modal -->
+ <div id="cardModal" class="card-modal">
+    <div class="modal-content-wrapper">
+      <div class="modal-header-custom">
+        <h2 id="modalTitle"></h2>
+        <span class="modal-close">&times;</span>
+      </div>
+      <div class="modal-body-custom">
+        <!-- Inner wrapper with gradient + blur -->
+        <div class="modal-content-inner">
+          <p id="modalText"></p>
+          <div class="modal-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+// Modal functionality
+const modal = document.getElementById('cardModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalText = document.getElementById('modalText');
+const closeBtn = document.querySelector('.modal-close');
+let modalTimeout;
+
+// Modal content for each button
+const modalContent = {
+  btn1: {
+    title: 'Birthday Celebration',
+    text: 'Make their special day unforgettable with our beautiful birthday arrangements! Perfect for spreading joy and happiness.'
+  },
+  btn2: {
+    title: 'Anniversary Special',
+    text: 'Celebrate your love story with our romantic anniversary collection. Every moment deserves to be cherished!'
+  },
+  btn3: {
+    title: 'Chocolate Basket',
+    text: 'Indulge in sweetness with our delightful chocolate baskets. Perfect for any occasion or just because!'
+  },
+  btn4: {
+    title: 'Congratulations',
+    text: 'Celebrate achievements and milestones with our congratulations collection. Success deserves recognition!'
+  },
+  btn5: {
+    title: 'Love & Romance',
+    text: 'Express your deepest feelings with our romantic collection. Love is always in season!'
+  }
+};
+
+// Add click event to all buttons
+['btn1', 'btn2', 'btn3', 'btn4', 'btn5'].forEach(btnId => {
+  const btn = document.getElementById(btnId);
+  if (btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      showModal(btnId);
+    });
+  }
+});
+
+function showModal(btnId) {
+  const content = modalContent[btnId];
+  modalTitle.textContent = content.title;
+  modalText.textContent = content.text;
+  
+  modal.classList.remove('hide');
+  modal.classList.add('show');
+  
+  // Auto close after 5 seconds
+  clearTimeout(modalTimeout);
+  modalTimeout = setTimeout(() => {
+    closeModal();
+  }, 5000);
+}
+
+function closeModal() {
+  modal.classList.add('hide');
+  setTimeout(() => {
+    modal.classList.remove('show', 'hide');
+  }, 300);
+}
+
+// Close button click
+closeBtn.addEventListener('click', closeModal);
+
+// Close when clicking outside
+modal.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); 
+     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Nunito:wght@400;600&display=swap');
+
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        .img-fluid{
+            height: auto;
+            max-height: 120px;
+        }
+        #card1 img#i1,
+        #card1 #i1,
+        #i1.img-fluid,
+        img#i1.img-fluid,
+        #i1{
+            height: 610px !important;
+            max-height: 610px !important;
+            min-height: 610px !important;
+            width: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+        img#i2.img-fluid, img#i3.img-fluid, img#i4.img-fluid, img#i5.img-fluid{
+            max-height: none !important;
+            height: auto !important;
+        }
+        i{
+            font-size: x-large;
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            /* padding-top: 20px; */
+            margin: 0 auto;
+        }
+        i:hover{
+            color: #EC167F;
+        }
+        .custom-header
+        {
+          position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           height: 90px;
+             text-align: center;
+           z-index: 9999;
+           background: white;
+        }
+        #nav-links{
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+        
+        #nav-links a{
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            line-height: 60px;
+            transition: 0.5s ease;
+        }
+         #nav-links a:hover{
+           color: #EC167F;
+                 
+         }
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .menu-toggle span{
+            display: block;
+            height: 3px;
+            background-color: black;
+            border-radius: 2px;
+        }
+        @media (max-width:992px) {
+            #nav-links{
+                display: none;
+                flex-direction: column;
+                background-color: white;
+                position: absolute;
+                top: 60px;
+                font-size: 1.2em;
+                right: 0;
+                width: 200px;
+                padding: 10px;
+                border-radius: 8px;
+                height: auto;
+                box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+            }
+            i{
+                font-size: xx-large;
+            }
+            #nav-links.active{
+                display: flex;
+            }
+            .menu-toggle{
+                display: flex;
+            
+            }
+                  
+           
+        }
+        .nav-link{
+         font-family: "Oswald", sans-serif;
+         font-weight: 800;
+         font-size: 1.1em;
+         
+        }
+        #nav{
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+        #ig{
+       display: flex;
+       gap: 20px;
+        }
+      
+
+  .nav-link {
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 100px;
+      text-align: center;
+
+    }
+
+    .nav-link:hover {
+      background-color: rgb(218, 89, 110);
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    #flo{
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 140px;
+      text-align: center;
+
+    }
+     #flo:hover {
+    background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+     #flow{
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 150px;
+      text-align: center;
+
+    }
+     #flow:hover {
+        background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+      #flof{
+      transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 121px !important;
+      text-align: center;
+
+    }
+     #flof:hover {
+        background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    #lop{
+    
+      min-height: 600px;
+    }
+       #lop1{
+    
+      min-height: 300px;
+    }
+
+     .text-overlay{
+    
+      height: auto;
+      width: 100%;
+      max-width: 95px;
+      border: 4px double rgb(238, 153, 167);
+      background-color: rgb(235, 106, 127);
+      color: white;
+    }
+    .text-overlay:hover{
+        background-color: rgb(247, 173, 185);
+         color: white;
+         box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+      }
+       .text-overlay2{
+      position: absolute;
+      top: 80%;
+      left: 55%;
+      /* align-items: ; */
+      /* align-items: flex-end; */
+      height: auto;
+      width: 100%;
+      max-width: 115px;
+      border: 4px double rgb(238, 153, 167);
+      background-color: rgb(235, 106, 127);
+      color: white;
+    }
+    @media (max-width:946px) {
+        .text-overlay2{
+            position: absolute;
+      top: 80%;
+      left: 42%;  
+        }
+    }
+    .text-overlay2:hover{
+        background-color: rgb(247, 173, 185);
+         color: white;
+         box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+      }
+      @media  (max-width:1024) {
+         .text-overlay2{
+           position: absolute;
+      top: 80%;
+      left: 40%;
+       height: auto;
+      width: 100%;
+      max-width: 110px;
+         }
+      }
+   #ma{
+    margin-left: 10px;
+   }
+  
+  
+  #mt{
+   min-height: 500px ;
+   
+  }
+  /* .row{
+    margin-left: 10px;
+  } */
+  #box{
+    transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 100px;
+      text-align: center;
+  }
+  #box:hover{
+    background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  #flo1{
+    transition: 0.5s ease;
+      font-size: var(--font-size-m) !important;
+      border-radius: 20px !important;
+      width: 120px;
+      text-align: center;
+  }
+  #flo1:hover{
+    background-color: #EC167F;
+      color: white !important;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  :root{
+   
+  }
+  #navinp{
+    display: flex;
+    align-items: center;
+     border-radius: 50px;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    color: white;
+    /* max-width: 40px; */
+    align-content: center;
+      /* border: 2px solid #c71585; */
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.2);
+         border: 2px solid white;
+       background: linear-gradient(to right, #ff1493, #ffabe0);
+      outline: none;
+  }
+  #navinp:focus{
+        border-color: white;
+  outline: none;
+   background: #f14a9b;
+  box-shadow: 0 0 10px #ff66b2aa;
+  color: white;
+  }
+   #navinp::placeholder{
+    color: white;
+   }
+  @media  (max-width:1169px){
+    #navinp{
+     
+    display: none;
+    }
+  }
+  .nav-item{
+    display: flex;
+    align-items: center;
+  }
+  
+      /* position: absolute;
+      top: 440px;
+      left: 10px;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 700;
+      width: 190px;
+      border-radius: 20px;
+      height: auto;
+      min-height: 40px;
+      background-color: red;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.4rem;
+      color: white;
+      box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  }   */
+     .dropdown-menu{
+        background-color: #EC167F;
+        box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+      }
+.dropdown-item{
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: white;
+    color: #EC167F;
+}
+.navbar,
+.container-fluid,
+.d-flex {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Ensure dropdown appears on top */
+.dropdown-menu {
+  z-index: 1050;
+  position: absolute;
+  top: 100%; /* ensures it's below the toggle link */
+  left: 0;
+}
+/* Enable dropdown on hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Optional: animate the dropdown */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+  #florp-footer.ziggly {
+  --zig-pink-dark: #c71585;
+  --zig-pink-light: #ffb6c1;
+  --zig-pink-gradient: linear-gradient(45deg, #ff1493, #ff69b4);
+  --zig-text-color: #3a0e44;
+  --zig-background: linear-gradient(135deg, #ffe6f0, #ffd1e8);
+  font-family: 'Nunito', sans-serif;
+  background: var(--zig-background);
+  color: var(--zig-text-color);
+  padding: 4rem 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+#florp-footer.ziggly .gribbly-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Footer row flex */
+#florp-footer.ziggly .glip-glop-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+}
+
+/* Each column */
+#florp-footer.ziggly .glip-glop-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+#florp-footer.ziggly .florp-about {
+  flex: 1.5 1 320px;
+}
+
+/* Headings */
+#florp-footer.ziggly h2,
+#florp-footer.ziggly h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: var(--zig-pink-dark);
+  text-shadow: 0 1px 4px #f9a8ddaa;
+  animation: zoomZazzle 1.3s ease forwards;
+}
+
+#florp-footer.ziggly h2 {
+  font-style: italic;
+  font-size: 2.9rem;
+}
+
+#florp-footer.ziggly h5 {
+  font-size: 1.4rem;
+}
+
+#florp-footer.ziggly p {
+  font-weight: 600;
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2.6rem;
+  color: var(--zig-pink-dark);
+  animation: wiggleWaggle 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Links */
+#florp-footer.ziggly .glip-glop-links a {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.65rem;
+  color: var(--zig-pink-dark);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: slideZiggle 1.3s ease forwards;
+  opacity: 0;
+}
+#florp-footer.ziggly .glip-glop-links a:hover {
+  color: #ff4db8;
+  transform: translateX(7px);
+}
+/* Animate links with delay */
+#florp-footer.ziggly .glip-glop-links a:nth-child(1) { animation-delay: 1.1s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(2) { animation-delay: 1.2s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(3) { animation-delay: 1.3s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(4) { animation-delay: 1.4s; }
+#florp-footer.ziggly .glip-glop-links a:nth-child(5) { animation-delay: 1.5s; }
+
+/* Subscribe Form */
+#florp-footer.ziggly .snorp-form {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+#florp-footer.ziggly input[type="email"].snorp-email {
+  flex: 1 1 180px;
+  padding: 0.55rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--zig-pink-dark);
+  font-weight: 700;
+  color: var(--zig-pink-dark);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+#florp-footer.ziggly input[type="email"].snorp-email::placeholder {
+  color: #f79ac8;
+}
+#florp-footer.ziggly input[type="email"].snorp-email:focus {
+  border-color: #ff66b2;
+  outline: none;
+  box-shadow: 0 0 10px #ff66b2aa;
+}
+
+#florp-footer.ziggly button[type="submit"].snorp-button {
+  background: var(--zig-pink-gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  padding: 0.55rem 2.3rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #ff4db8aa;
+  transition: background 0.4s ease, transform 0.25s ease;
+  animation: zoomZazzle 1.7s ease forwards;
+}
+#florp-footer.ziggly button[type="submit"].snorp-button:hover {
+  background: #ff4db8;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px #ff66b2cc;
+}
+
+/* Social Icons */
+#florp-footer.ziggly .glop-socials {
+  display: flex;
+  gap: 1.1rem;
+}
+#florp-footer.ziggly .glop-socials a {
+  font-size: 1.9rem;
+  color: var(--zig-pink-dark);
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+#florp-footer.ziggly .glop-socials a:hover {
+  color: #ff66b2;
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* Footer bottom */
+#florp-footer.ziggly hr.zap-line {
+  border: none;
+  height: 1.5px;
+  background: var(--zig-pink-dark);
+  margin: 3rem 0 1rem;
+  opacity: 0.4;
+}
+#florp-footer.ziggly .zap-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--zig-pink-dark);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Back to top button */
+#florp-footer.ziggly .zoop-top {
+  background: var(--zig-pink-dark);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #ff4db8cc;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#florp-footer.ziggly .zoop-top:hover {
+  background: #ff4db8;
+  transform: scale(1.3);
+}
+
+/* Petals */
+#florp-footer.ziggly .plorp-petal {
+  position: absolute;
+  width: 80px;
+  height: 110px;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.35;
+  animation: florpFloat 12s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px #ff4db8cc);
+  transform-origin: center bottom;
+  pointer-events: none;
+  user-select: none;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(1) {
+  top: 15%;
+  left: 12%;
+  animation-delay: 0s;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(2) {
+  top: 35%;
+  left: 75%;
+  animation-delay: 4s;
+  width: 60px;
+  height: 90px;
+  opacity: 0.3;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(3) {
+  top: 70%;
+  left: 45%;
+  animation-delay: 8s;
+  width: 70px;
+  height: 100px;
+  opacity: 0.32;
+}
+#florp-footer.ziggly .plorp-petal:nth-child(4) {
+  top: 55%;
+  left: 85%;
+  animation-delay: 6s;
+  width: 55px;
+  height: 80px;
+  opacity: 0.28;
+}
+
+/* Animations */
+@keyframes florpFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-40px) rotate(15deg) scale(1.1);
+    opacity: 0.6;
+  }
+}
+@keyframes zoomZazzle {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes slideZiggle {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes wiggleWaggle {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes popZop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(8deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes fadeZink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal styles */
+#florp-footer.ziggly #wobble-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  background: rgba(255, 20, 147, 0.85);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeZink 0.35s ease forwards;
+}
+#florp-footer.ziggly #wobble-modal.sproing {
+  display: flex;
+  animation: popZop 0.4s ease forwards;
+}
+
+#florp-footer.ziggly .zooble-content {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 1.2rem;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 15px 40px #ff4db8cc;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  color: var(--zig-pink-dark);
+  transform-origin: center;
+}
+
+#florp-footer.ziggly #wobble-modal p#ziggyMessage {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem;
+}
+
+#florp-footer.ziggly .sprocket-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.3rem;
+  font-size: 2rem;
+  color: var(--zig-pink-dark);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.xx_socialbox a i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  will-change: transform, color;
+   font-size: 1.9rem;
+  color: purple;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover animation: scale and rotate slightly with color change */
+.xx_socialbox a:hover i {
+  color: #EC167F; /* bright pink */
+  transform: scale(1.3) rotate(15deg);
+
+}
+
+/* Continuous subtle bounce animation */
+@keyframes weirdbounce01 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Apply subtle bounce on all icons, delayed for each */
+/* .xx_socialbox a i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  will-change: transform, color;
+}
+
+/* Hover animation: scale and rotate slightly with color change */
+.xx_socialbox a:hover i {
+  color: #EC167F; /* bright pink */
+  transform: scale(1.3) rotate(15deg);
+  
+}
+
+/* Continuous subtle bounce animation */
+@keyframes weirdbounce01 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Apply subtle bounce on all icons, delayed for each */
+.xx_socialbox a i {
+  animation: weirdbounce01 3s ease-in-out infinite;
+}
+
+.xx_socialbox a:nth-child(1) i {
+  animation-delay: 0s;
+}
+.xx_socialbox a:nth-child(2) i {
+  animation-delay: 0.3s;
+}
+.xx_socialbox a:nth-child(3) i {
+  animation-delay: 0.6s;
+}
+.xx_socialbox a:nth-child(4) i {
+  animation-delay: 0.9s;
+} 
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 720px) {
+  #florp-footer.ziggly .glip-glop-row {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  #florp-footer.ziggly .glip-glop-col {
+    flex: unset;
+    width: 100%;
+    min-width: auto;
+  }
+
+  #florp-footer.ziggly .zap-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+    /* 🌸 Unique namespace: freshPetal_ */
+
+    #freshPetal_overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 247, 251, 0.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      animation: freshPetal_overlayFadeIn 0.8s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes freshPetal_overlayFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes freshPetal_overlayFadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    #freshPetal_modal {
+      position: relative;
+      max-width: 360px;
+      background: linear-gradient(145deg, #fffafc, #ffeef5);
+      padding: 2.5rem 1.5rem;
+      border-radius: 40px;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+      box-shadow: 0 10px 30px rgba(235, 140, 180, 0.35);
+      animation: freshPetal_modalUp 1s ease forwards, freshPetal_float 4s ease-in-out infinite;
+      animation-delay: 1.2s, 2.2s;
+    }
+
+    /* ✨ Floral shimmer border */
+    #freshPetal_modal::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 40px;
+      padding: 3px;
+      background: linear-gradient(120deg, #f7c8d9, #ffdbe8, #f7c8d9);
+      background-size: 400% 400%;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      animation: freshPetal_borderShimmer 8s ease infinite;
+      pointer-events: none;
+    }
+
+    @keyframes freshPetal_modalUp {
+      from { opacity: 0; transform: translateY(50px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes freshPetal_float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes freshPetal_borderShimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .freshPetal_close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: linear-gradient(145deg, #f8c5d7, #ffdbe8);
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 12px #f6b8c9;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      z-index: 2;
+    }
+
+    .freshPetal_close:hover {
+      transform: rotate(180deg) scale(1.15);
+      box-shadow: 0 0 20px #fff, 0 0 25px #f6b8c9;
+    }
+
+    .freshPetal_icon {
+      font-size: 2.8rem;
+      margin-bottom: 0.4rem;
+      color: #e76c9e;
+      text-shadow: 0 0 10px #ffd6e0;
+      animation: freshPetal_iconGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes freshPetal_iconGlow {
+      0% { text-shadow: 0 0 8px #ffd6e0; transform: scale(1); }
+      100% { text-shadow: 0 0 15px #ffbad6; transform: scale(1.08); }
+    }
+
+    .freshPetal_title {
+      font-family: "Brush Script MT", cursive;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e05f8c;
+      margin: 0.2rem 0;
+    }
+
+    .freshPetal_divider {
+      width: 70px;
+      height: 2px;
+      margin: 0.5rem auto 1rem auto;
+      background: linear-gradient(90deg, #f7b2c4, #e05f8c, #f7b2c4);
+      border-radius: 2px;
+    }
+
+    .freshPetal_text {
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      color: #b34f74;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* 🌸 Petals remain unchanged */
+    .freshPetal_petal {
+      position: fixed;
+      background: #f7b2c4;
+      width: 20px;
+      height: 20px;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      animation: freshPetal_petalFloat 1.2s ease forwards;
+    }
+
+    @keyframes freshPetal_petalFloat {
+      0% { opacity: 0; transform: translateY(20px) rotate(45deg); }
+      30% { opacity: 1; }
+      100% { opacity: 1; transform: translateY(-100px) rotate(45deg); }
+    }
+
+    @keyframes freshPetal_petalFadeOut {
+      from { opacity: 1; transform: scale(1); }
+      to { opacity: 0; transform: scale(0); }
+    }
+    /* 🌿 Suggestion Box */
+    .loapSuggestionBox_001 {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+        background: linear-gradient(135deg, #ffe6eb 0%, #ffd6e0 50%, #ffc2d1 100%);
+      border: 1px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      z-index: 999;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .loapSuggestionItem_001 {
+      padding: 8px 12px;
+      cursor: pointer;
+      color: #EC167F;
+      transition: background 0.2s ease;
+    }
+    .loapSuggestionItem_001:hover {
+      background: #EC167F;
+      color: white;
+    }
+
+    /* 🌸 Floral Modal Overlay */
+    .loapModalOverlay_001 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      backdrop-filter: blur(4px);
+    }
+
+    /* 🌺 Modal Box with Floral Background */
+    .loapModalBox_001 {
+      background: linear-gradient(135deg, #ffe6f0, #ffd6e0, #ffcde0);
+      color: #54213d;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      position: relative;
+      animation: loapBloomIn_001 0.7s ease forwards;
+      width: 330px;
+      box-shadow: 0 0 20px rgba(255,182,193,0.6);
+    }
+
+    /* ✨ Blooming Animation */
+    @keyframes loapBloomIn_001 {
+      0% {
+        transform: scale(0.4) rotate(-10deg);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1) rotate(3deg);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    /* 🌼 Glow pulse behind modal */
+    .loapModalBox_001::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      background: radial-gradient(circle, rgba(255,192,203,0.4), transparent 70%);
+      z-index: -1;
+      border-radius: 30px;
+      animation: loapGlowPulse_001 3s infinite ease-in-out;
+    }
+    @keyframes loapGlowPulse_001 {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+
+    /* ❌ Close Icon */
+    .loapModalClose_001 {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      font-size: 22px;
+      color: #54213d;
+      cursor: pointer;
+      transition: transform 0.4s ease, color 0.3s ease;
+    }
+    .loapModalClose_001:hover {
+      transform: rotate(180deg) scale(1.2);
+      color: #d63384;
+    }
+
+    /* 🌷 OK Button */
+    .loapModalButton_001 {
+      background: white;
+      color: #d63384;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      margin-top: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .loapModalButton_001:hover {
+      background: #ffe6f0;
+      transform: scale(1.05);
+    }
+
+    /* 🌿 Navbar Search Container */
+    .loapSearchWrapper_001 {
+      position: relative;
+      width: 250px;
+    }
+ html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+ </style>
+</head>
+<body>
+ <header class="custom-header">
+        <div class="logo">
+            <img src="logor.jpg.png" alt="" class="img-fluid" id="my">
+             </div>
+            <nav id="nav-links">
+              <a href="index.html">Home</a>
+              <a href="flowershop.html">Flower Shop</a>
+              <a href="My Account.html">My Account</a>
+              <a href="About Us.html">About Us</a>
+              <a href="FAQS.html">FAQs</a>
+              <a href="Contact Us.html">Contact Us</a>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </nav>
+           <div class="menu-toggle" onclick="document.querySelector('#nav-links').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+           </div>
+        
+          </header>
+          
+                      <div class="d-flex">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav" id="ig">  
+        <li class="nav-item">
+          <a class="nav-link" href="Flower Boquet.html" id="flo">Flower Bouquet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flower jewellery.html" id="flo">Flower Jewellery</a>
+        </li>
+         <li class="nav-item">                                    
+
+          <a class="nav-link" href="Flower box.html" id="box">Flower Box</a>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link " href="single flower.html"  role="button" aria-expanded="false" id="flof">
+            Single Flower
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="single flower.html">Red Rose</a></li>
+            <li><a class="dropdown-item" href="single flower.html">White Rose</a></li>
+            <li><a class="dropdown-item" href="single flower.html">Daisy</a></li>
+              <li><a class="dropdown-item" href="single flower.html">Defodils</a></li>
+            <li><a class="dropdown-item" href="single flower.html">Tulip</a></li>
+            <li><a class="dropdown-item" href="single flower.html">Orchid</a></li>
+             <li><a class="dropdown-item" href="single flower.html">Lavender</a></li>
+              <li><a class="dropdown-item" href="single flower.html"> Bluebell flower</a></li>
+                <li><a class="dropdown-item" href="single flower.html">Iris</a></li>
+
+
+            
+          </ul>
+        </li>
+          <li class="nav-item">                                     
+
+          <a class="nav-link" href="Flower Basket.html" id="flo1"> Flower Basket</a>
+        </li>
+         
+         <li class="nav-item">                                     
+
+          <a class="nav-link" href="wedding.html" id="box">Wedding</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="ocassion.html" role="button" aria-expanded="false" id="box">
+            Ocassions 
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="ocassion.html">Birthday</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Get well soon</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Father's day</a></li>
+              <li><a class="dropdown-item" href="ocassion.html">Christmas</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Mother's day</a></li>
+            <li><a class="dropdown-item" href="ocassion.html">Anniversary</a></li>
+             <li><a class="dropdown-item" href="ocassion.html">Eid</a></li>
+              <li><a class="dropdown-item" href="ocassion.html"> Sympathy</a></li>
+                <li><a class="dropdown-item" href="ocassion.html">Congratulations</a></li>
+
+
+            
+          </ul>
+        </li>
+
+        
+      
+        </li>
+     
+             
+           
+      </ul>
+        <form class="d-flex ms-auto loapSearchWrapper_001" id="loapSearchForm_001" onsubmit="return false;"   autocomplete="new-password">
+                <input  class="form-control me-2  " id="navinp" type="search" placeholder="Search" aria-label="Search" >
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                <div class="loapSuggestionBox_001" id="loapSuggestionBox_001"></div>
+              </form>
+    </div>
+  </div>
+</nav>                                                     
+        </div>
+ <!-- ---------- HTML STRUCTURE ---------- -->
+
+<footer id="florp-footer" class="ziggly">
+  <!-- Floating petals -->
+  <span class="plorp-petal"></span>
+  <span class="plorp-petal"></span>
+  <span class="plorp-petal"></span>
+  <span class="plorp-petal"></span>
+
+  <div class="gribbly-container">
+    <div class="glip-glop-row">
+      <div class="glip-glop-col florp-about">
+        <h2>Petal Paradise</h2>
+        <p>Every petal tells a story. Handcrafted bouquets & fresh blooms delivered with love.</p>
+      </div>
+
+      <div class="glip-glop-col">
+        <h5>Quick Links</h5>
+        <nav class="glip-glop-links" aria-label="Quick links">
+          <a href="About Us.html">About Us</a>
+          <a href="index.html">Services</a>
+          <a href="flowershop.html">Shop</a>
+          <a href="Contact Us.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="glip-glop-col">
+        <h5>Subscribe</h5>
+        <form class="snorp-form" id="florp-subscribe-form" novalidate>
+          <input type="email" class="snorp-email" id="snorp-email" placeholder="Your email" required aria-label="Email address" />
+          <button type="submit" class="snorp-button" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="glip-glop-col">
+        <h5>Follow Us</h5>
+        <div class="xx_socialbox">
+  <a href="https://facebook.com/YourPage" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com/YourPage" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://instagram.com/YourPage" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://pinterest.com/YourPage" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest">
+    <i class="fab fa-pinterest-p"></i>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <hr class="zap-line" />
+
+    <div class="zap-bottom">
+      <p>© 2024 Petal Paradise. All rights reserved.</p>
+      <button class="zoop-top" aria-label="Back to top" title="Back to top">&#8679;</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="wobble-modal" role="dialog" aria-modal="true" aria-labelledby="ziggyMessage">
+    <div class="zooble-content">
+      <p id="ziggyMessage">Thanks for subscribing!</p>
+      <button class="sprocket-close" aria-label="Close modal">&times;</button>
+    </div>
+  </div>
+</footer>
+ <!-- 🌸 More petals -->
+  <div class="freshPetal_petal" style="top:85%; left:50%;"></div>
+  <div class="freshPetal_petal" style="top:86%; left:48%;"></div>
+  <div class="freshPetal_petal" style="top:83%; left:52%;"></div>
+  <div class="freshPetal_petal" style="top:88%; left:46%;"></div>
+  <div class="freshPetal_petal" style="top:84%; left:54%;"></div>
+  <div class="freshPetal_petal" style="top:87%; left:45%;"></div>
+  <div class="freshPetal_petal" style="top:82%; left:55%;"></div>
+  <div class="freshPetal_petal" style="top:86%; left:49%;"></div>
+  <div class="freshPetal_petal" style="top:85%; left:47%;"></div>
+  <div class="freshPetal_petal" style="top:84%; left:53%;"></div>
+  <div class="freshPetal_petal" style="top:83%; left:51%;"></div>
+  <div class="freshPetal_petal" style="top:89%; left:44%;"></div>
+  <div class="freshPetal_petal" style="top:81%; left:56%;"></div>
+
+  <!-- 🌸 Modal -->
+  <div id="freshPetal_overlay">
+    <div id="freshPetal_modal">
+      <button class="freshPetal_close" onclick="freshPetal_closeModal()">×</button>
+      <div class="freshPetal_icon">🌸</div>
+      <h2 class="freshPetal_title">Single Flower Bliss</h2>
+      <div class="freshPetal_divider"></div>
+      <p class="freshPetal_text">“A single blossom carries the whispers of spring.”</p>
+    </div>
+  </div>
+ <div class="loapModalOverlay_001" id="loapModalOverlay_001">
+  <div class="loapModalBox_001">
+    <span class="loapModalClose_001" id="loapModalClose_001">&times;</span>
+    <h5>Oops! 🌸</h5>
+    <p>We couldn’t find anything matching your search.</p>
+    <button class="loapModalButton_001" id="loapModalButton_001">OK</button>
+  </div>
+</div>
+
+<!-- FontAwesome CDN for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+<script>
+  // 🌿 Route Map
+  const loapRouteMap_001 = {
+    "home": "index.html",
+    "flower shop": "flowershop.html",
+    "my account": "My Account.html",
+    "about us": "About Us.html",
+    "faqs":"FAQS.html",
+    "contact us": "Contact Us.html",
+    "flower boquet": "Flower Boquet.html",
+    "flower jewellery": "flower jewellery.html",
+    "flower box": "Flower box.html",
+    "single flower": "single flower.html",
+     "red rose": "single flower.html",
+      "white rose": "single flower.html",
+       "daisy": "single flower.html",
+        "defodils": "single flower.html",
+         "tulip": "single flower.html",
+          "orchid": "single flower.html",
+           "lavender": "single flower.html",
+            "Bluebell": "single flower.html",
+             "iris": "single flower.html",
+    "flower basket": "Flower Basket.html",
+    "wedding": "wedding.html",
+    "ocassion": "ocassion.html",
+    "birthday": "ocassion.html",
+    "get well soon": "ocassion.html",
+     "christmas": "ocassion.html",
+      "mother day": "ocassion.html",
+       "father day": "ocassion.html",
+        "anniversary": "ocassion.html",
+         "eid": "ocassion.html",
+          "sympathy": "ocassion.html",
+           "congractulation": "ocassion.html",
+
+    
+  
+  };
+
+  const loapSearchInput = document.getElementById('navinp');
+  const loapSuggestionBox = document.getElementById('loapSuggestionBox_001');
+  const loapModalOverlay = document.getElementById('loapModalOverlay_001');
+  const loapModalClose = document.getElementById('loapModalClose_001');
+  const loapModalButton = document.getElementById('loapModalButton_001');
+
+  // ✨ Show suggestions as user types
+  loapSearchInput.addEventListener('input', () => {
+    const keyword = loapSearchInput.value.trim().toLowerCase();
+    loapSuggestionBox.innerHTML = '';
+    if (keyword === '') {
+      loapSuggestionBox.style.display = 'none';
+      return;
+    }
+    const suggestions = Object.keys(loapRouteMap_001).filter(item => item.startsWith(keyword));
+    if (suggestions.length > 0) {
+      suggestions.forEach(suggestion => {
+        const div = document.createElement('div');
+        div.className = 'loapSuggestionItem_001';
+        div.textContent = suggestion;
+        div.onclick = () => loapRedirect(suggestion);
+        loapSuggestionBox.appendChild(div);
+      });
+      loapSuggestionBox.style.display = 'block';
+    } else {
+      loapSuggestionBox.style.display = 'none';
+    }
+  });
+
+  // ⌨ Handle submit
+  document.getElementById('loapSearchForm_001').addEventListener('submit', () => {
+    const keyword = loapSearchInput.value.trim().toLowerCase();
+    if (loapRouteMap_001[keyword]) {
+      loapRedirect(keyword);
+    } else {
+      loapShowModal();
+    }
+  });
+
+  // 🚀 Redirect Function
+  function loapRedirect(keyword) {
+    const path = loapRouteMap_001[keyword];
+    if (path) {
+      window.location.href = path + '?v=' + Date.now();
+    } else {
+      loapShowModal();
+    }
+  }
+
+  // 🌸 Modal Functions
+  function loapShowModal() {
+    loapModalOverlay.style.display = 'flex';
+  }
+  function loapHideModal() {
+    loapModalOverlay.style.display = 'none';
+  }
+
+  loapModalClose.addEventListener('click', loapHideModal);
+  loapModalButton.addEventListener('click', loapHideModal);
+  window.addEventListener('click', (e) => {
+    if (e.target === loapModalOverlay) loapHideModal();
+    
+  }); 
+ (() => {
+  const snorpForm = document.getElementById('florp-subscribe-form');
+  const snorpEmail = document.getElementById('snorp-email');
+  const wobbleModal = document.getElementById('wobble-modal');
+  const sprocketClose = wobbleModal.querySelector('.sprocket-close');
+  const ziggyMessage = document.getElementById('ziggyMessage');
+  const zoopTopBtn = document.querySelector('#florp-footer .zoop-top');
+
+  // Show modal function
+  function bingleModal(message) {
+    ziggyMessage.textContent = message; // set message dynamically
+    wobbleModal.classList.add('sproing');
+  }
+  // Hide modal function
+  function dingleModal() {
+    wobbleModal.classList.remove('sproing');
+  }
+
+  // Form submit handler
+  snorpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailValue = snorpEmail.value.trim();
+    if (emailValue && emailValue.includes('@')) {
+      bingleModal('Thanks for subscribing!');
+      snorpForm.reset();
+    } else {
+      bingleModal('Please enter a valid email address.');
+      snorpEmail.focus();
+    }
+  });
+
+  // Close modal button
+  sprocketClose.addEventListener('click', () => {
+    dingleModal();
+  });
+
+  // Close modal on outside click
+  wobbleModal.addEventListener('click', (e) => {
+    if (e.target === wobbleModal) {
+      dingleModal();
+    }
+  });
+
+  // Back to top button
+  zoopTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+const freshOverlay = document.getElementById('freshPetal_overlay');
+    const freshPetals = document.querySelectorAll('.freshPetal_petal');
+
+    function freshPetal_closeModal() {
+      freshOverlay.style.animation = 'freshPetal_overlayFadeOut 0.7s ease forwards';
+
+      freshPetals.forEach((p) => {
+        p.style.animation = 'freshPetal_petalFadeOut 0.8s ease forwards';
+        setTimeout(() => p.remove(), 800);
+      });
+
+      setTimeout(() => {
+        freshOverlay.style.display = 'none';
+      }, 800);
+    }
+
+    setTimeout(() => freshPetal_closeModal(), 5000);
+
+</script>
+
+
+
+
+
+
+<script src="jquery-3.7.1 (1).js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

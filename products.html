@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floral Boutique — Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="logor.jpg.png" alt="logo" height="36">
+        Floral Boutique
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-4">
+    <div class="container">
+      <div class="row g-3 mb-3">
+        <div class="col-lg-3">
+          <div class="p-3 border rounded-3 h-100">
+            <h2 class="h6">Filter by Category</h2>
+            <div id="chips-categories" class="mt-2"></div>
+            <hr>
+            <h2 class="h6">Filter by Flower</h2>
+            <div id="chips-flowers" class="mt-2"></div>
+            <hr>
+            <a href="compare.html" class="btn btn-sm btn-brand w-100">Go to Compare</a>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3" id="products-grid"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white">
+    <div class="container d-flex justify-content-between">
+      <span class="text-muted small">© 2025 Floral Boutique</span>
+      <a class="small" href="mailto:hello@floral-boutique.example">hello@floral-boutique.example</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
